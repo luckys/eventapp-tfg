@@ -27,4 +27,3 @@ PHP: true
 exclude_paths:
 - spec/**/*
 - vendor/**/*
-- test/**/*
