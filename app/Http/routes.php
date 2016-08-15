@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function ($api) {
+
+    $api->group(['prefix' => 'admin'], function ($api) {
+
+        $api->get('users', function () {
+            return response()->json(['name' => 'Abigail', 'state' => 'CA']);
+        });
+
+    });
+
+
+});
