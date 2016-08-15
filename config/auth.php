@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => EventApp\User::class,
+    'model' => EventApp\Domain\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------

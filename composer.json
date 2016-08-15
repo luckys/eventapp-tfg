@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "dingo/api": "1.0.*@dev",
         "tymon/jwt-auth": "0.5.*",
-        "mpociot/laravel-apidoc-generator": "^1.5"
+        "mpociot/laravel-apidoc-generator": "^1.5",
+        "ramsey/uuid-doctrine": "~1.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

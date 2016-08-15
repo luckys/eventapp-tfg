@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.master');
+});
+
+Route::get('/admin', function () {
+    return view('layout.master_admin');
 });
 
 $api = app('Dingo\Api\Routing\Router');
