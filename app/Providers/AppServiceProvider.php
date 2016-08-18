@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(
+            'EventApp\Domain\Models\Repositories\UserRepositoryInterface',
+            'EventApp\Repositories\Eloquent\UserRepository'
+        );
     }
 }

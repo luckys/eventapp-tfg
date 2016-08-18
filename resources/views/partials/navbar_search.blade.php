@@ -28,8 +28,7 @@
                     </div>
                     <div class="a-col action">
                         <a href="#">
-                            <span>Check</span>
-                            Availability
+                            Buscar
                         </a>
                     </div>
                 </form>

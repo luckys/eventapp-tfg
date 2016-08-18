@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: EventApp
-        psr4_prefix: EventApp
-        src_path: app

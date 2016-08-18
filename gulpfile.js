@@ -1,7 +1,8 @@
 var elixir = require('laravel-elixir');
+elixir.config.js.browserify.watchify.options.poll = true;
 
 require('laravel-elixir-vueify');
-
+require('laravel-elixir-livereload');
 
 /*
  |--------------------------------------------------------------------------
@@ -15,36 +16,6 @@ require('laravel-elixir-vueify');
  */
 
 elixir(function(mix) {
-    mix.styles([
-        'superfish.css',
-        'bootstrap-datepicker.min.css',
-        'cs-select.css',
-        'cs-skin-border.css',
-        'icomoon.css',
-        'flexslider.css',
-        'style.css'
-    ]);
-});
-
-elixir(function(mix) {
-    mix.browserify('main.js');
-});
-
-elixir(function(mix) {
-    mix.scripts([
-        'hoverIntent.js',
-        'superfish.js',
-        'jquery.waypoints.min.js',
-        'jquery.countTo.js',
-        'jquery.stellar.min.js',
-        'bootstrap-datepicker.min.js',
-        'classie.js',
-        'selectFx.js',
-        'jquery.flexslider-min.js',
-        'custom.js'
-    ]);
-});
-
-elixir(function(mix) {
-    mix.phpUnit();
+    mix.browserify('main1.js', 'public/js/app.js');
+    mix.livereload();
 });

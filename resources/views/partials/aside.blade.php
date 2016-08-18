@@ -9,9 +9,7 @@
                             <div class="desc">
                                 <p><span>Bora Hotel</span></p>
                                 <h2>Reserve Room for Family Vacation</h2>
-                                <p>
-                                    <a href="#" class="btn btn-primary btn-lg">Book Now</a>
-                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -25,9 +23,6 @@
                             <div class="desc">
                                 <p><span>Deluxe Hotel</span></p>
                                 <h2>Make Your Vacation Comfortable</h2>
-                                <p>
-                                    <a href="#" class="btn btn-primary btn-lg">Book Now</a>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -41,9 +36,6 @@
                             <div class="desc">
                                 <p><span>Luxe Hotel</span></p>
                                 <h2>A Best Place To Enjoy Your Life</h2>
-                                <p>
-                                    <a href="#" class="btn btn-primary btn-lg">Book Now</a>
-                                </p>
                             </div>
                         </div>
                     </div>

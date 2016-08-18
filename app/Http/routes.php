@@ -12,12 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('layout.master');
+    return view('layouts.app');
 });
 
-Route::get('/admin', function () {
-    return view('layout.master_admin');
-});
 
 $api = app('Dingo\Api\Routing\Router');
 
@@ -25,9 +22,7 @@ $api->version('v1', function ($api) {
 
     $api->group(['prefix' => 'admin'], function ($api) {
 
-        $api->get('users', function () {
-            return response()->json(['name' => 'Abigail', 'state' => 'CA']);
-        });
+        $api->post('users', 'EventApp\Http\Controllers\Api\ApiUserController@store');
 
     });
 

@@ -1,3 +1,4 @@
+<router-view></router-view>
 <div id="fh5co-header">
     <header id="fh5co-header-section">
         <div class="container">
@@ -7,13 +8,15 @@
                 <nav id="fh5co-menu-wrap" role="navigation">
                     <ul class="sf-menu" id="fh5co-primary-menu">
                         <li><a class="active" href="index.html">Inicio</a></li>
-                        <li><a href="services.html">Eventos</a></li>
+                        <li><a <a v-link="{ name: 'events'}">Eventos</a></li>
                         <li><a href="blog.html">Charlas</a></li>
                         <li><a href="contact.html">Login</a></li>
-                        <li><a href="contact.html">Registrarse</a></li>
+                        <li><a data-toggle="modal" data-target="#myModal" href="#">Registrarse</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 </div>
+
+@include('user.create')
