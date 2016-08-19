@@ -12,19 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.app');
-});
-
-
-$api = app('Dingo\Api\Routing\Router');
-
-$api->version('v1', function ($api) {
-
-    $api->group(['prefix' => 'admin'], function ($api) {
-
-        $api->post('users', 'EventApp\Http\Controllers\Api\ApiUserController@store');
-
-    });
-
-
+    return view('welcome');
 });

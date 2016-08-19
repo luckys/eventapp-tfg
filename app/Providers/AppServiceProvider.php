@@ -1,6 +1,6 @@
 <?php
 
-namespace EventApp\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,9 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(
-            'EventApp\Domain\Models\Repositories\UserRepositoryInterface',
-            'EventApp\Repositories\Eloquent\UserRepository'
-        );
+        //
     }
 }

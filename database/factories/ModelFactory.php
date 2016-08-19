@@ -11,20 +11,11 @@
 |
 */
 
-use EventApp\Domain\Models\User;
-
-$factory->define(User::class, function (Faker\Generator $faker) {
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'id' => '',
-        'email' => 'user@demo.com',
-        'password' => bcrypt('secret'),
-        'firstname' => $faker->name,
-        'lastname' => $faker->lastName,
-        'company' => $faker->company,
-        'biography' => $faker->sentence,
-        'url_github' => 'http://github.com/user',
-        'url_twitter' => 'http://twitter.com/user',
-        'photo' => 'imagen.jpg',
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
     ];
 });
