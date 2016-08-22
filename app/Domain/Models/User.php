@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace EventApp\Domain\Models;
 
+use Ramsey\Uuid\Uuid;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -23,12 +24,25 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $table = 'users';
 
+    public $incrementing = false;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'id',
+        'email',
+        'password',
+        'firstname',
+        'lastname',
+        'company',
+        'biography',
+        'url_github',
+        'url_twitter',
+        'photo'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -36,4 +50,19 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function setIdAttribute()
+    {
+        $this->attributes['id'] = Uuid::uuid4()->toString();
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
 }
