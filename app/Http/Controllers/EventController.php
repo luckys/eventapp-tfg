@@ -3,6 +3,7 @@
 namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Event\CreateEventService;
+use EventApp\Application\Services\Event\ListEventService;
 use EventApp\Http\Requests\EventRequest;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,13 @@ class EventController extends Controller
     public function index()
     {
         //
+    }
+
+    public function list(ListEventService $service)
+    {
+        $events = $service->execute();
+
+        return view('admin.events.list', compact('events'));
     }
 
     /**

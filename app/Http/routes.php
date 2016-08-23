@@ -26,6 +26,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 
     Route::get('events/create', 'EventController@create');
+    Route::get('events', 'EventController@list');
     Route::post('events', 'EventController@store');
 });
 

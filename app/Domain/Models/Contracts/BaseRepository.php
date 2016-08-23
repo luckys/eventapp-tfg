@@ -40,6 +40,16 @@ interface BaseRepository
 
 
     /**
+     * Retrieve all data of repository, paginated
+     *
+     * @param int $limit
+     * @param array $columns
+     * @return mixed
+     */
+    public function paginate($limit = 10, $columns = ['*']);
+
+
+    /**
      * Find data by id
      *
      * @param       $id

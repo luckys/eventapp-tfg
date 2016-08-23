@@ -11,11 +11,35 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+use EventApp\Domain\Models\Event;
+use EventApp\Domain\Models\User;
+
+$factory->define(User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
+        'id' => '',
+        'email' => $faker->email,
+        'password' => bcrypt('secret'),
+        'firstname' => $faker->name,
+        'lastname' => $faker->lastName,
+        'company' => $faker->company,
+        'biography' => $faker->sentence,
+        'url_github' => 'http://github.com/user',
+        'url_twitter' => 'http://twitter.com/user',
+        'photo' => 'imagen.jpg',
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(Event::class, function (Faker\Generator $faker) {
+    return [
+        'id' => '',
+        'user_id' => $faker->uuid,
+        'name' => 'Primer Evento',
+        'description' => $faker->paragraphs,
+        'start_date' => $faker->dateTime,
+        'end_date' => $faker->dateTime,
+        'address' => $faker->address,
+        'price' => $faker->randomNumber(),
+        'avatar' => $faker->imageUrl(),
     ];
 });

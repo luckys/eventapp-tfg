@@ -152,6 +152,26 @@ abstract class EloquentRepository implements BaseRepository
     }
 
     /**
+     * Retrieve all data of repository, paginated
+     *
+     * @param int $limit
+     * @param array  $columns
+     * @param string $method
+     *
+     * @return mixed
+     */
+    public function paginate($limit = 10, $columns = ['*'], $method = "paginate")
+    {
+        $results = $this->model->{$method}($limit, $columns);
+
+        $results->appends(app('request')->query());
+
+        $this->resetModel();
+
+        return $results;
+    }
+
+    /**
      * Find data by field and value
      *
      * @param       $field
