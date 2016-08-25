@@ -11,7 +11,7 @@
                         <div class="panel-body">
                             @include('admin.errors.form_error')
 
-                            {!! Form::open(['url' => 'admin/events', 'class' => 'form-horizontal', 'id' => 'nameForm', 'files' => true]) !!}
+                            {!! Form::open(['url' => 'event', 'class' => 'form-horizontal', 'id' => 'nameForm', 'files' => true]) !!}
 
                             @include('admin.events.form', ['button' => 'Agregar'])
 

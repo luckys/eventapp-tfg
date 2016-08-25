@@ -8,7 +8,7 @@
                     Administración de Eventos
                 </header>
                 <div class="panel-body">
-                    <a class="btn btn-default" href="{{ url('admin/events/create') }}" role="button">
+                    <a class="btn btn-default" href="{{ url('event') }}" role="button">
                         <i class="fa fa-plus"></i>
                     </a>
                     <table class="table table-hover general-table">

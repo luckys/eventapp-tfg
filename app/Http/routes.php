@@ -25,9 +25,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.master');
     });
 
-    Route::get('events/create', 'EventController@create');
-    Route::get('events', 'EventController@list');
-    Route::post('events', 'EventController@store');
+    Route::get('event/create', 'EventController@create');
+    Route::get('event', 'EventController@list');
+    Route::post('event', 'EventController@store');
 });
 
 
