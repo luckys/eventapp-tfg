@@ -16,7 +16,7 @@
         <ul class="nav nav-pills nav-stacked custom-nav">
             <li><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
             <li><a href="index.html"><i class="fa fa-user"></i> <span>Usuarios</span></a></li>
-            <li><a href="{{ url('event') }}"><i class="fa fa-home"></i> <span>Eventos</span></a></li>
+            <li><a href="{{ url('admin/events') }}"><i class="fa fa-home"></i> <span>Eventos</span></a></li>
             <li><a href="index.html"><i class="fa fa-home"></i> <span>Charlas</span></a></li>
         </ul>
         <!--sidebar nav end-->

@@ -25,4 +25,18 @@ class ListEventService extends EventService
             return $e->getMessage();
         }
     }
+
+    /**
+     * @param null $request
+     * @param null $id
+     * @return mixed
+     */
+    public function getAllEvents()
+    {
+        try {
+            return $this->event->all();
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
 }

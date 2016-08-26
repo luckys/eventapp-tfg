@@ -7,8 +7,8 @@
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
                         <div class="slider-text-inner js-fullheight">
                             <div class="desc">
-                                <p><span>Bora Hotel</span></p>
-                                <h2>Reserve Room for Family Vacation</h2>
+                                <p><span>PHP Tenerife 2016</span></p>
+                                <h2>Evento en Tenerife sobre PHP</h2>
 
                             </div>
                         </div>
@@ -21,8 +21,8 @@
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
                         <div class="slider-text-inner js-fullheight">
                             <div class="desc">
-                                <p><span>Deluxe Hotel</span></p>
-                                <h2>Make Your Vacation Comfortable</h2>
+                                <p><span>DDD In Action</span></p>
+                                <h2>All About DDD in PHP</h2>
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,8 @@
                     <div class="col-md-12 col-md-offset-0 text-center slider-text">
                         <div class="slider-text-inner js-fullheight">
                             <div class="desc">
-                                <p><span>Luxe Hotel</span></p>
-                                <h2>A Best Place To Enjoy Your Life</h2>
+                                <p><span>Laravel Talk</span></p>
+                                <h2>A Best Place To Learn Laravel</h2>
                             </div>
                         </div>
                     </div>

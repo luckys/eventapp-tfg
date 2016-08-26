@@ -23,7 +23,7 @@
             <label>Apellidos</label>
             {!! Form::text('lastname', null, ['class' => 'form-control']) !!}
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-offset-4">
             <button class="btn btn-primary" type="submit"><i class="fa fa-check fa-fw" aria-hidden="true"></i>Registrarse</button>
         </div>
     </fieldset>

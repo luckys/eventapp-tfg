@@ -146,6 +146,7 @@ return [
         EventApp\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 

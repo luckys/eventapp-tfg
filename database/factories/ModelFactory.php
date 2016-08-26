@@ -18,7 +18,7 @@ $factory->define(User::class, function (Faker\Generator $faker) {
     return [
         'id' => '',
         'email' => $faker->email,
-        'password' => bcrypt('secret'),
+        'password' => 'secret',
         'firstname' => $faker->name,
         'lastname' => $faker->lastName,
         'company' => $faker->company,
@@ -39,7 +39,7 @@ $factory->define(Event::class, function (Faker\Generator $faker) {
         'start_date' => $faker->dateTime,
         'end_date' => $faker->dateTime,
         'address' => $faker->address,
-        'price' => $faker->randomNumber(),
+        'price' => 50,
         'avatar' => $faker->imageUrl(),
     ];
 });

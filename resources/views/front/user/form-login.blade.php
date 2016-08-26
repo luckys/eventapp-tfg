@@ -10,7 +10,7 @@
             {!! Form::password('password', ['class' => 'form-control']) !!}
         </div>
 
-        <div class="form-group">
+        <div class="form-group col-md-offset-5">
             <button class="btn btn-primary" type="submit"><i class="fa fa-check fa-fw" aria-hidden="true"></i>Entrar</button>
         </div>
     </fieldset>

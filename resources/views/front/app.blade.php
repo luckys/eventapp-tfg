@@ -20,9 +20,7 @@
 
         @include('front.partials.navbar_counter')
 
-        @yield('content')
-
-        @include('front.partials.content')
+            @yield('content')
 
         @include('front.partials.footer')
     </div>

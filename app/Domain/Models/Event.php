@@ -7,7 +7,7 @@ use Ramsey\Uuid\Uuid;
 
 class Event extends Model
 {
-    protected $table = 'event';
+    protected $table = 'events';
 
     public $incrementing = false;
 

@@ -7,22 +7,21 @@
                     <div class="a-col">
                         <section>
                             <select class="cs-select cs-skin-border">
-                                <option value="" disabled selected>Select Hotel</option>
-                                <option value="email">Luxe Hotel</option>
-                                <option value="twitter">Deluxe Hotel</option>
-                                <option value="linkedin">Five Star Hotel</option>
+                                <option value="" disabled selected>Seleccione</option>
+                                <option value="email">Eventos</option>
+                                <option value="twitter">Charlas</option>
                             </select>
                         </section>
                     </div>
                     <div class="a-col alternate">
                         <div class="input-field">
-                            <label for="date-start">Check In</label>
+                            <label for="date-start">Fecha de Inicio</label>
                             <input type="text" class="form-control" id="date-start" />
                         </div>
                     </div>
                     <div class="a-col alternate">
                         <div class="input-field">
-                            <label for="date-end">Check Out</label>
+                            <label for="date-end">Fecha de Fin</label>
                             <input type="text" class="form-control" id="date-end" />
                         </div>
                     </div>

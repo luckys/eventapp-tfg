@@ -19,7 +19,7 @@ class CreateEventService extends EventService
     public function execute($request = null, $id = null)
     {
         try {
-            $path = public_path().'/profiles/';
+            $path = public_path().'/events/';
             $fileName = $request->file('image');
             $datas = [
                 'id' => '',

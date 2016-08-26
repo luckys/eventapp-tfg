@@ -4,6 +4,7 @@ namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Event\CreateEventService;
 use EventApp\Application\Services\Event\ListEventService;
+use EventApp\Application\Services\Event\ShowEventService;
 use EventApp\Http\Requests\EventRequest;
 use Illuminate\Http\Request;
 
@@ -12,11 +13,12 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param ListEventService $service
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ListEventService $service)
     {
-        //
+        return $service->getAllEvents();
     }
 
     public function list(ListEventService $service)
@@ -53,12 +55,20 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     * @param ShowEventService $service
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, ShowEventService $service)
     {
-        //
+        $event = $service->execute(null, $id);
+
+        $talk = [
+            'title' => 'TDD en PHP',
+            'date' => '2016-08-22 09:00'
+        ];
+
+        return view('front.event.show', compact('event', 'talk'));
     }
 
     /**
