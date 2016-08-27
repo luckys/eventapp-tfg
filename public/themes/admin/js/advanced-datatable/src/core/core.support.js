@@ -239,7 +239,7 @@ function _fnCallbackReg( oSettings, sStore, fn, sName )
 
 
 /**
- * Fire callback functions and trigger event. Note that the loop over the callback
+ * Fire callback functions and trigger events. Note that the loop over the callback
  * array store is done backwards! Further note that you do not want to fire off triggers
  * in time sensitive applications (for example cell creation) as its slow.
  *  @param {object} oSettings dataTables settings object

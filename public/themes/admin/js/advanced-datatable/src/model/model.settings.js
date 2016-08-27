@@ -760,7 +760,7 @@ DataTable.models.oSettings = {
 	/**
 	 * Flag attached to the settings object so you can check in the draw 
 	 * callback if filtering has been done in the draw. Deprecated in favour of
-	 * event.
+	 * events.
 	 *  @type boolean
 	 *  @default false
 	 *  @deprecated
@@ -770,7 +770,7 @@ DataTable.models.oSettings = {
 	/**
 	 * Flag attached to the settings object so you can check in the draw 
 	 * callback if sorting has been done in the draw. Deprecated in favour of
-	 * event.
+	 * events.
 	 *  @type boolean
 	 *  @default false
 	 *  @deprecated
@@ -796,7 +796,7 @@ DataTable.models.oSettings = {
 	
 	/**
 	 * Destroy callback functions - for plug-ins to attach themselves to the
-	 * destroy so they can clean up markup and event.
+	 * destroy so they can clean up markup and events.
 	 *  @type array
 	 *  @default []
 	 */

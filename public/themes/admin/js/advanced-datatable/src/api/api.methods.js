@@ -492,7 +492,7 @@ this.fnDestroy = function ( bRemove )
 		}
 	}
 	
-	/* Blitz all DT event */
+	/* Blitz all DT events */
 	$(oSettings.nTableWrapper).find('*').andSelf().unbind('.DT');
 	
 	/* If there is an 'empty' indicator row, remove it */
@@ -511,7 +511,7 @@ this.fnDestroy = function ( bRemove )
 		oSettings.nTable.appendChild( oSettings.nTFoot );
 	}
 	
-	/* Remove the DataTables generated nodes, event and classes */
+	/* Remove the DataTables generated nodes, events and classes */
 	oSettings.nTable.parentNode.removeChild( oSettings.nTable );
 	$(oSettings.nTableWrapper).remove();
 	

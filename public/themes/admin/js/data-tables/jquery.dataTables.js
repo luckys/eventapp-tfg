@@ -4831,7 +4831,7 @@
 		
 		
 		/**
-		 * Fire callback functions and trigger event. Note that the loop over the callback
+		 * Fire callback functions and trigger events. Note that the loop over the callback
 		 * array store is done backwards! Further note that you do not want to fire off triggers
 		 * in time sensitive applications (for example cell creation) as its slow.
 		 *  @param {object} oSettings dataTables settings object
@@ -5431,7 +5431,7 @@
 				}
 			}
 			
-			/* Blitz all DT event */
+			/* Blitz all DT events */
 			$(oSettings.nTableWrapper).find('*').andSelf().unbind('.DT');
 			
 			/* If there is an 'empty' indicator row, remove it */
@@ -5450,7 +5450,7 @@
 				oSettings.nTable.appendChild( oSettings.nTFoot );
 			}
 			
-			/* Remove the DataTables generated nodes, event and classes */
+			/* Remove the DataTables generated nodes, events and classes */
 			oSettings.nTable.parentNode.removeChild( oSettings.nTable );
 			$(oSettings.nTableWrapper).remove();
 			
@@ -11294,7 +11294,7 @@
 		/**
 		 * Flag attached to the settings object so you can check in the draw 
 		 * callback if filtering has been done in the draw. Deprecated in favour of
-		 * event.
+		 * events.
 		 *  @type boolean
 		 *  @default false
 		 *  @deprecated
@@ -11304,7 +11304,7 @@
 		/**
 		 * Flag attached to the settings object so you can check in the draw 
 		 * callback if sorting has been done in the draw. Deprecated in favour of
-		 * event.
+		 * events.
 		 *  @type boolean
 		 *  @default false
 		 *  @deprecated
@@ -11330,7 +11330,7 @@
 		
 		/**
 		 * Destroy callback functions - for plug-ins to attach themselves to the
-		 * destroy so they can clean up markup and event.
+		 * destroy so they can clean up markup and events.
 		 *  @type array
 		 *  @default []
 		 */
@@ -11981,7 +11981,7 @@
 	$.fn.dataTableExt = DataTable.ext;
 
 
-	// Information about event fired by DataTables - for documentation.
+	// Information about events fired by DataTables - for documentation.
 	/**
 	 * Draw event, fired whenever the table is redrawn on the page, at the same point as
 	 * fnDrawCallback. This may be useful for binding events or performing calculations when

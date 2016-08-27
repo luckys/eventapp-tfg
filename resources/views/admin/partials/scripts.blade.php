@@ -1,8 +1,8 @@
-<script src="themes/admin/js/jquery-2.1.4.min.js"></script>
-<script src="themes/admin/js/jquery-ui-1.9.2.custom.min.js"></script>
-<script src="themes/admin/js/bootstrap.min.js"></script>
-<script src="themes/admin/js/modernizr.min.js"></script>
-<script src="themes/admin/js/jquery.nicescroll.js"></script>
-<script src="themes/admin/js/scripts.js"></script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{{ asset('themes/admin/js/jquery-1.10.2.min.js') }}"></script>
+<script src="{{ asset('themes/admin/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('themes/admin/js/modernizr.min.js') }}"></script>
+<script src="{{ asset('themes/admin/js/jquery.nicescroll.js') }}"></script>
+<script src="{{ asset('themes/admin/js/scripts.js') }}"></script>
 
 @yield('scripts')

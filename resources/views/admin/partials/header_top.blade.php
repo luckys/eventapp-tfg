@@ -11,8 +11,8 @@
         <ul class="notification-menu">
             <li>
                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <img alt="" src="{{ asset('themes/admin/images/profiles/avatar-mini.jpg')  }}">
-
+                    <img alt="" src="{{ asset('profiles/'.Auth::user()->photo)  }}">
+                    {{ Auth::user()->fullname }}
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-usermenu pull-right">

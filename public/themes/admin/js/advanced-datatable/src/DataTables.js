@@ -166,7 +166,7 @@
 	$.fn.dataTableExt = DataTable.ext;
 
 
-	// Information about event fired by DataTables - for documentation.
+	// Information about events fired by DataTables - for documentation.
 	/**
 	 * Draw event, fired whenever the table is redrawn on the page, at the same point as
 	 * fnDrawCallback. This may be useful for binding events or performing calculations when
