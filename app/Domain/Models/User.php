@@ -65,4 +65,9 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany(Event::class);
     }
+
+    public function talks()
+    {
+        return $this->hasMany(Talk::class);
+    }
 }

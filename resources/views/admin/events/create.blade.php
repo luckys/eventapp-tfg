@@ -7,7 +7,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     @include('admin.partials.message')
                     <div class="panel panel-default">
-                        <div class="panel-heading">Crear Evento</div>
+                        <div class="panel-heading">Nuevo Evento</div>
                         <div class="panel-body">
                             @include('admin.errors.form_error')
 

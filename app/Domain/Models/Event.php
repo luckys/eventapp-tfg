@@ -32,4 +32,9 @@ class Event extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function talks()
+    {
+        return $this->belongsToMany(Talk::class);
+    }
 }

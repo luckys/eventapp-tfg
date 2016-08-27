@@ -31,7 +31,7 @@
                             <td>{{ $event->start_date }}</td>
                             <td>{{ $event->end_date }}</td>
                             <td>{{ $event->address }}</td>
-                            <td>{{ $event->price }}</td>
+                            <td>{{ $event->price }} €</td>
                             <td>
                                 <div class="btn-group">
                                     <a class="btn btn-default" href="#" role="button">

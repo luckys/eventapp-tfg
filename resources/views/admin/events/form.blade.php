@@ -86,6 +86,7 @@
     <div class="col-lg-offset-2 col-lg-8">
 
         {!! Form::submit($button, ['class' => 'btn btn-primary']) !!}
+        <a href="{{ url('admin/events') }}" class="btn btn-default">Cancelar</a>
 
     </div>
 </div>

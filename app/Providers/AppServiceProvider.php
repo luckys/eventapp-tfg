@@ -37,5 +37,10 @@ class AppServiceProvider extends ServiceProvider
             'EventApp\Domain\Models\Contracts\EventRepositoryInterface',
             'EventApp\Repositories\Eloquent\EventRepository'
         );
+
+        $this->app->bind(
+            'EventApp\Domain\Models\Contracts\TalkRepositoryInterface',
+            'EventApp\Repositories\Eloquent\TalkRepository'
+        );
     }
 }
