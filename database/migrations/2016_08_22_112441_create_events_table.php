@@ -12,16 +12,19 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('event', function (Blueprint $table) {
-            $table->uuid('id')->index();
-            $table->uuid('user_id');
+        Schema::create('events', function (Blueprint $table) {
+            $table->uuid('id')->unique()->index();
+            $table->uuid('author_id');
+            $table->foreign('author_id')
+                  ->references('id')
+                  ->on('users');
             $table->string('name');
             $table->string('description');
-            $table->string('start_date');
-            $table->string('end_date');
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->string('address');
             $table->decimal('price', 5, 2);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
             $table->primary('id');
         });

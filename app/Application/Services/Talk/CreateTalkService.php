@@ -20,8 +20,8 @@ class CreateTalkService extends TalkService
     public function execute($request = null, $id = null)
     {
         try {
-            $pathImage = public_path().'/talks/';
-            $pathFile = public_path().'/talks/uploads/';
+            $pathImage = public_path().'/uploads/talks/';
+            $pathFile = public_path().'/uploads/talks/files/';
             $imageName = $request->file('image');
             $fileName = $request->file('file');
             $datas = [
@@ -31,18 +31,21 @@ class CreateTalkService extends TalkService
                 'description' => $request->description,
                 'type' => $request->type,
                 'level' => $request->level,
-                'start_date' => $request->start_date.' '.$request->start_time,
-                'end_date' => $request->end_date.' '.$request->end_time,
+                'start_date' => $request->start_date,
+                'end_date' => $request->end_date,
                 'length' => $request->length,
                 'address' => $request->address,
                 'price' => $request->price,
                 'url_slide' => $request->url_slide,
-                'file' => $fileName->getClientOriginalName(),
-                'image' => $imageName->getClientOriginalName(),
+                'file' => $fileName ? $fileName->getClientOriginalName() : '',
+                'image' => $imageName ? $imageName->getClientOriginalName() : '',
                 'notes' => $request->notes
             ];
+
             $this->talk->create($datas);
+            if($fileName)
             $request->file('file')->move($pathFile, $fileName->getClientOriginalName());
+            if($imageName)
             $request->file('image')->move($pathImage, $imageName->getClientOriginalName());
         } catch (\Exception $e) {
             return $e->getMessage();

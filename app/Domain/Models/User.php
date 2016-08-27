@@ -61,6 +61,11 @@ class User extends Model implements AuthenticatableContract,
         $this->attributes['password'] = bcrypt($value);
     }
 
+    public function getFullNameAttribute()
+    {
+        return $this->firstname.' '.$this->lastname;
+    }
+
     public function events()
     {
         return $this->hasMany(Event::class);

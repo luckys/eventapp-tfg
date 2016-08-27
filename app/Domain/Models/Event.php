@@ -13,7 +13,7 @@ class Event extends Model
 
     protected $fillable = [
         'id',
-        'user_id',
+        'author_id',
         'name',
         'description',
         'start_date',
@@ -35,6 +35,6 @@ class Event extends Model
 
     public function talks()
     {
-        return $this->belongsToMany(Talk::class);
+        return $this->belongsToMany(Talk::class)->withTimestamps();
     }
 }

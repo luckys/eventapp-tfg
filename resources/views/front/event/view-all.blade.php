@@ -23,13 +23,13 @@
         <div v-for="event in events">
             <div class="col-md-4">
                 <div class="hotel-content">
-                    <div class="hotel-grid" style="background-image: url(events/@{{ event.image }});">
+                    <div class="hotel-grid" style="background-image: url(uploads/events/@{{ event.image }});">
                         <div class="price"><small>Precio</small><span>@{{ event.price }} €</span></div>
                         <a class="book-now text-center" href=""> Comprar</a>
                     </div>
                     <div class="desc">
                         <h3><a href="{{ url('events/show') }}/@{{ event.id }}">@{{ event.name }}</a></h3>
-                        <p>@{{ event.description }}</p>
+                        <p>@{{ event.description | truncate '100' }}</p>
                         <h4>
                             <span class="label label-default">Comienzo:</span>  @{{ event.start_date }}
                         </h4>
@@ -57,6 +57,14 @@
                 }
             },
 
+            filters: {
+
+                truncate: function(string, value) {
+                    return string.substring(0, value) + '...';
+                }
+
+            },
+
             created: function () {
                 this.fetchEventList();
             },
@@ -75,7 +83,6 @@
 
         new Vue({
             el: '#myEvents'
-
         });
     </script>
 @endsection

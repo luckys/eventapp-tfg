@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('events', 'EventController@store');
 
     Route::get('talks/create', 'TalkController@create');
+    Route::post('talks', 'TalkController@store');
 });
 
 Route::get('api/events', 'EventController@index');

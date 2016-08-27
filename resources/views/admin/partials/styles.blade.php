@@ -3,4 +3,4 @@
 <link rel="stylesheet" href="{{ asset('themes/admin/css/style-responsive.css') }}">
 <link rel="stylesheet" href="{{ asset('themes/admin/fonts/css/font-awesome.min.css') }}">
 
-@yield('style')
+@yield('styles')

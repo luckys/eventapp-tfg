@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="{{ asset('events/'.$event->image) }}" class="img-responsive" alt="Image">
+                            <img src="{{ asset('uploads/events/'.$event->image) }}" class="img-responsive" alt="Image">
                         </div>
                         <div class="col-md-6">
                             <span class="super-heading-sm">Evento</span>
@@ -34,39 +34,28 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="panel panel-default">
-                            <div class="panel-heading">Charlas del Evento</div>
+                            <div class="panel-heading">Charlas Subscritas al Evento</div>
                             <div class="panel-body">
                                 <ul class="list-group">
-                                    <a href="{{ url('talks/1') }}" class="list-group-item">
+                                    @foreach($event->talks as $talk)
+                                    <a href="{{ url('talks/show/'.$talk->id) }}" class="list-group-item">
                                         <div>
                                             <div class="media-left">
                                                 <img class="media-object" src="http://fakeimg.pl/64x64/" alt="...">
                                             </div>
                                             <div class="media-body">
-                                                <h4 class="media-heading">{{ $talk['title'] }} <span class="label label-info">{{ $talk['date'] }}</span></h4>
+                                                <h4 class="media-heading">{{ $talk->title }} <span class="label label-info">{{ $talk->start_date }}</span></h4>
                                                 <span>Ponente:</span>
-                                                <strong>Luis Ramirez</strong>
+                                                <strong>{{ $talk->speaker->fullname }}</strong>
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="{{ url('talks/2') }}" class="list-group-item">
-                                        <div>
-                                            <div class="media-left">
-                                                <img class="media-object" src="http://fakeimg.pl/64x64/" alt="...">
-                                            </div>
-                                            <div class="media-body">
-                                                <h4 class="media-heading">{{ $talk['title'] }} <span class="label label-info">{{ $talk['date'] }}</span></h4>
-                                                <span>Ponente:</span>
-                                                <strong>Luis Ramirez</strong>
-                                            </div>
-                                        </div>
-                                    </a>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

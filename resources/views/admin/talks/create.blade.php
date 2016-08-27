@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('themes/admin/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}">
 @endsection
 
 @section('content')
@@ -29,11 +29,7 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js') }}">
-        $(".form_datetime").datetimepicker({
-            format: 'yyyy-mm-dd hh:ii',
-            language: 'es'
-        });
-    </script>
+    <script src="{{ asset('themes/admin/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ asset('themes/admin/js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js') }}"></script>
+    <script src="{{ asset('themes/admin/js/bootstrap-datetimepicker/js/datetimepicker-init.js') }}"></script>
 @endsection

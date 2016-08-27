@@ -27,30 +27,18 @@
 <div class="form-group">
     <label  class="col-lg-2 col-sm-2 control-label">Fecha y Hora de comienzo</label>
 
-    <div class="col-lg-4">
+    <div class="col-lg-8">
 
-        {!! Form::date('start_date', null, ['class' => 'form-control']) !!}
-
-
-    </div>
-    <div class="col-lg-4">
-
-        {!! Form::time('start_time', null, ['class' => 'form-control']) !!}
+        {!! Form::text('start_date', null, ['class' => 'form-control form_datetime']) !!}
 
     </div>
-
 </div>
 
 <div class="form-group">
     <label  class="col-lg-2 col-sm-2 control-label">Fecha y Hora de clausura</label>
-    <div class="col-lg-4">
+    <div class="col-lg-8">
 
-        {!! Form::date('end_date', null, ['class' => 'form-control']) !!}
-
-    </div>
-    <div class="col-lg-4">
-
-        {!! Form::time('end_time', null, ['class' => 'form-control']) !!}
+        {!! Form::text('end_date', null, ['class' => 'form-control form_datetime']) !!}
 
     </div>
 </div>

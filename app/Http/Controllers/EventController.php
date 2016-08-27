@@ -63,12 +63,7 @@ class EventController extends Controller
     {
         $event = $service->execute(null, $id);
 
-        $talk = [
-            'title' => 'TDD en PHP',
-            'date' => '2016-08-22 09:00'
-        ];
-
-        return view('front.event.show', compact('event', 'talk'));
+        return view('front.event.show', compact('event'));
     }
 
     /**

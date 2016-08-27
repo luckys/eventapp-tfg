@@ -26,11 +26,11 @@ class EventRequest extends Request
         return [
             'name' => 'required|string',
             'description' => 'required|string',
-            'start_date' => 'required|string',
-            'end_date' => 'required|string',
+            'start_date' => 'required',
+            'end_date' => 'required',
             'address' => 'required|string',
             'price' => 'required|numeric',
-            'cover' => 'image',
+            'image' => 'required|image',
         ];
     }
 }

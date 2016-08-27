@@ -1,5 +1,9 @@
 @extends('admin.master')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('themes/admin/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}">
+@endsection
+
 @section('content')
     <section class="wrapper">
         <div class="container-fluid">
@@ -22,4 +26,10 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('themes/admin/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ asset('themes/admin/js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js') }}"></script>
+    <script src="{{ asset('themes/admin/js/bootstrap-datetimepicker/js/datetimepicker-init.js') }}"></script>
 @endsection

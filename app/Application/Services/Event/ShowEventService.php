@@ -21,6 +21,7 @@ class ShowEventService extends EventService
     {
         try {
             return $this->event->find($id);
+
         } catch (\Exception $e) {
             $e->getMessage();
         }
