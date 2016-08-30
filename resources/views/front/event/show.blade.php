@@ -1,6 +1,7 @@
 @extends('front.app')
 
 @section('content')
+    <br><br><br><br><br><br>
         <div class="tab-content-container">
             <div class="tab-content active show" data-tab-content="tab1">
                 <div class="container">

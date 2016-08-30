@@ -1,26 +1,37 @@
 @extends('front.app')
 
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('themes/admin/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}">
+@endsection
+
 @section('content')
+    <br><br><br><br>
     <div id="fh5co-hotel-section">
-        <div class="container">
+        <div class="container" id="myEvents">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center">
-                        <h2>Últimos Eventos y Charlas Añadidas</h2>
+                        <h2>Eventos</h2>
                     </div>
                 </div>
             </div>
-            <div class="row" id="myEvents">
 
-                <event-card></event-card>
+            @include('front.partials.navbar_search')
+            <br>
 
+            <div class="row">
+                <event-card
+                        :filter-start-date="searchStartDate"
+                        :filter-price="searchPrice"
+                >
+                </event-card>
             </div>
 
         </div>
     </div>
 
     <template id="event-template">
-        <div v-for="event in events">
+        <div v-for="event in events | filterBy filterStartDate in 'start_date' | filterBy filterPrice in 'price'">
             <div class="col-md-4">
                 <div class="hotel-content">
                     <div class="hotel-grid" style="background-image: url(uploads/events/@{{ event.image }});">
@@ -45,44 +56,20 @@
 
 
 @section('scripts')
+    <script src="{{ asset('themes/luxe/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('themes/luxe/js/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js') }}"></script>
     <script src="{{ asset('js/vue/vue.js') }}"></script>
+    <script src="{{ asset('js/vue/components/event-card.js') }}"></script>
     <script>
 
-        Vue.component('event-card', {
-            template: '#event-template',
+        var today = new Date();
+        var actual = String(today.getFullYear()+'-'+("0" + (today.getMonth() + 1)).slice(-2)+'-'+today.getDate());
 
-            data: function () {
-                return {
-                    events: []
-                }
-            },
-
-            filters: {
-
-                truncate: function(string, value) {
-                    return string.substring(0, value) + '...';
-                }
-
-            },
-
-            created: function () {
-                this.fetchEventList();
-            },
-
-            methods: {
-                fetchEventList: function () {
-                    $.getJSON('api/events', function (event) {
-                        this.events = event;
-
-                        console.log(event);
-
-                    }.bind(this));
-                }
-            }
-        });
-
-        new Vue({
-            el: '#myEvents'
+        $(".form_datetime").datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            startDate: actual,
+            language: 'es'
         });
     </script>
 @endsection

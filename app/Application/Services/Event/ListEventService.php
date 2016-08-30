@@ -27,14 +27,12 @@ class ListEventService extends EventService
     }
 
     /**
-     * @param null $request
-     * @param null $id
      * @return mixed
      */
     public function getAllEvents()
     {
         try {
-            return $this->event->all();
+            return $this->event->orderBy('created_at', 'desc')->all();
         } catch (\Exception $e) {
             return $e->getMessage();
         }

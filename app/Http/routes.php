@@ -33,6 +33,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 });
 
 Route::get('api/events', 'EventController@index');
+Route::get('events', 'EventController@allEvents');
 Route::get('events/show/{id}', 'EventController@show');
 
 

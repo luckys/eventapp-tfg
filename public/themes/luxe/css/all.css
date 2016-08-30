@@ -3760,6 +3760,7 @@ pre code {
 .row {
   margin-left: -20px;
   margin-right: -20px;
+  margin-top: auto;
 }
 .row:before, .row:after {
   content: " ";
@@ -3774,6 +3775,7 @@ pre code {
   min-height: 1px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 0;
 }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
@@ -9807,13 +9809,14 @@ div.cs-select span {
 
 #availability {
   background: #FF5722;
-  width: 100%;
+  width: 85%;
   top: 1em;
   z-index: 99;
   position: relative;
   display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: -80px;
+  margin-bottom: 50px;
+	margin-left: 100px;
   -webkit-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -9872,11 +9875,11 @@ div.cs-select span {
   }
 }
 #availability .a-col.alternate {
-  width: 30%;
+  width: 50%;
 }
 @media screen and (max-width: 829px) {
   #availability .a-col.alternate {
-    width: 50% !important;
+    width: 45% !important;
   }
 }
 @media screen and (max-width: 492px) {

@@ -21,6 +21,17 @@ class EventController extends Controller
         return $service->getAllEvents();
     }
 
+    /**
+     * Show all the events
+     *
+     * @return \Illuminate\Http\Response
+     * @internal param ListEventService $service
+     */
+    public function allEvents()
+    {
+        return view('front.event.index');
+    }
+
     public function list(ListEventService $service)
     {
         $events = $service->execute();

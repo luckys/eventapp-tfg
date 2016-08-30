@@ -16,9 +16,9 @@
 
         @include('front.partials.aside')
 
-        @include('front.partials.navbar_search')
-
-        @include('front.partials.navbar_counter')
+        @if(\Request::is('/'))
+            @include('front.partials.navbar_counter')
+        @endif
 
             @yield('content')
 

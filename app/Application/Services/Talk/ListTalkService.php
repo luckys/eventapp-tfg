@@ -25,4 +25,16 @@ class ListTalkService extends TalkService
             return $e->getMessage();
         }
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAllTalks()
+    {
+        try {
+            return $this->talk->orderBy('created_at', 'desc')->all();
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
 }
