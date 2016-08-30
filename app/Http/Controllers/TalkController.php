@@ -3,6 +3,7 @@
 namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Talk\CreateTalkService;
+use EventApp\Application\Services\Talk\ListTalkService;
 use EventApp\Http\Requests\TalkRequest;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,13 @@ class TalkController extends Controller
     public function index()
     {
         //
+    }
+
+    public function list(ListTalkService $service)
+    {
+        $talks = $service->execute();
+
+        return view('admin.talks.list', compact('talks'));
     }
 
     /**

@@ -23,7 +23,6 @@ class CreateTalksTable extends Migration
             $table->enum('type', ['Seminario', 'Taller', 'Conferencia']);
             $table->enum('level', ['Principiante', 'Intermedio', 'Avanzado']);
             $table->dateTime('start_date');
-            $table->dateTime('end_date');
             $table->smallInteger('length')->nullable();
             $table->string('address');
             $table->decimal('price', 5, 2)->default(0.00);

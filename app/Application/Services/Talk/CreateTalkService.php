@@ -32,7 +32,6 @@ class CreateTalkService extends TalkService
                 'type' => $request->type,
                 'level' => $request->level,
                 'start_date' => $request->start_date,
-                'end_date' => $request->end_date,
                 'length' => $request->length,
                 'address' => $request->address,
                 'price' => $request->price,

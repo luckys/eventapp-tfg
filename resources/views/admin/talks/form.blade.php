@@ -54,17 +54,6 @@
 </div>
 
 <div class="form-group">
-    <label  class="col-lg-2 col-sm-2 control-label">Fecha y Hora de terminación</label>
-
-    <div class="col-lg-4">
-
-        {!! Form::text('end_date', null, ['class' => 'form-control form_datetime']) !!}
-
-    </div>
-
-</div>
-
-<div class="form-group">
     <label  class="col-lg-2 col-sm-2 control-label">Tiempo de Duración</label>
     <div class="col-lg-4">
 

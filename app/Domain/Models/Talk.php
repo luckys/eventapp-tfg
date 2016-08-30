@@ -19,7 +19,6 @@ class Talk extends Model
         'type',
         'level',
         'start_date',
-        'end_date',
         'length',
         'address',
         'price',
