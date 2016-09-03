@@ -4,6 +4,7 @@ namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Talk\CreateTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
+use EventApp\Application\Services\Talk\ShowTalkService;
 use EventApp\Http\Requests\TalkRequest;
 use Illuminate\Http\Request;
 
@@ -62,12 +63,15 @@ class TalkController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     * @param ShowTalkService $service
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, ShowTalkService $service)
     {
-        //
+        $talk = $service->execute(null, $id);
+
+        return view('front.talk.show', compact('talk'));
     }
 
     /**
