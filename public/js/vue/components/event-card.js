@@ -3,7 +3,7 @@ Vue.component('event-card', {
 
     props: {
         filterStartDate: String,
-        filterPrice: String
+        filterQuery: String
     },
 
     data: function () {
@@ -39,7 +39,7 @@ new Vue({
     el: '#myEvents',
     data: {
         searchStartDate: '',
-        searchPrice: ''
+        searchQuery: ''
     }
 
 });
