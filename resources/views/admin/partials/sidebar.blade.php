@@ -11,6 +11,7 @@
         <!--sidebar nav start-->
         <ul class="nav nav-pills nav-stacked custom-nav">
             @if(Auth::check())
+                <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
                 <li class="active"><a href="{{ url('admin/dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                 <li><a href="{{ url('admin/events') }}"> <i class="fa fa-group" aria-hidden="true"></i><span>Eventos</span></a></li>
                 <li><a href="{{ url('admin/talks') }}"><i class="fa fa-volume-up" aria-hidden="true"></i> <span>Charlas</span></a></li>

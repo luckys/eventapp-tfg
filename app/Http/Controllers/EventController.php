@@ -78,6 +78,20 @@ class EventController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @param ShowEventService $service
+     * @return \Illuminate\Http\Response
+     */
+    public function showEvent($id, ShowEventService $service)
+    {
+        $event = $service->execute(null, $id);
+
+        return view('admin.events.show', compact('event'));
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

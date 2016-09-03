@@ -33,17 +33,17 @@
                             <td>{{ $event->address }}</td>
                             <td>{{ $event->price }} €</td>
                             <td>
-                                <div class="btn-group">
-                                    <a class="btn btn-default" href="#" role="button">
+                                <p>
+                                    <a class="btn btn-default" href="{{ url('admin/events/show/'.$event->id) }}">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a class="btn btn-success" href="#" role="button">
-                                        <i class="fa fa-refresh"></i>
+                                    <a class="btn btn-default" data-toggle="button">
+                                        <i class="fa fa-pencil"></i>
                                     </a>
-                                    <a class="btn btn-danger" href="#" role="button">
+                                    <a class="btn btn-default" data-toggle="button">
                                         <i class="fa fa-trash-o"></i>
                                     </a>
-                                </div>
+                                </p>
                             </td>
                         </tr>
                         @endforeach

@@ -9,8 +9,13 @@
                         <li><a class="active" href="{{ url('/') }}">Inicio</a></li>
                         <li><a <a href="{{ url('events') }}">Eventos</a></li>
                         <li><a href="{{ url('talks') }}">Charlas</a></li>
-                        <li><a data-toggle="modal" data-target="#myModalLogin" href="#">Acceder</a></li>
-                        <li><a data-toggle="modal" data-target="#myModal" href="#">Registrarse</a></li>
+                        @if(auth()->user())
+                            <li><a href="{{ url('admin/dashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ url('auth/logout') }}">Cerrar Sesión</a></li>
+                            @else
+                            <li><a data-toggle="modal" data-target="#myModalLogin" href="#">Acceder</a></li>
+                            <li><a data-toggle="modal" data-target="#myModal" href="#">Registrarse</a></li>
+                        @endif
                     </ul>
                 </nav>
             </div>
