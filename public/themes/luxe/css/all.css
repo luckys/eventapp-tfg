@@ -9896,6 +9896,7 @@ div.cs-select span {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
+	cursor: default;
 }
 #availability .a-col.action a {
   align-items: center;
@@ -9912,6 +9913,7 @@ div.cs-select span {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+
 }
 #availability .a-col.action a::after {
   font-family: 'themify';
