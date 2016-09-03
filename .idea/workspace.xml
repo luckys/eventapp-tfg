@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1feee202-07cf-48bc-bfdc-b89ad362ec55" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/images/slider1.jpg" afterPath="$PROJECT_DIR$/public/themes/luxe/images/slider1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/images/slider2.jpg" afterPath="$PROJECT_DIR$/public/themes/luxe/images/slider2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/images/slider3.jpg" afterPath="$PROJECT_DIR$/public/themes/luxe/images/slider3.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/talks/list.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/talks/list.blade.php" />
     </list>
     <ignored path="eventapp-tfg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +25,18 @@
     <favorites_list name="eventapp-tfg" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -406,7 +419,7 @@
       <workItem from="1472924439765" duration="2212000" />
       <workItem from="1472926713648" duration="1261000" />
       <workItem from="1472929664846" duration="4725000" />
-      <workItem from="1472935593825" duration="213000" />
+      <workItem from="1472935593825" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="Configuring Code Climate">
       <created>1471116275644</created>
@@ -541,11 +554,18 @@
       <option name="project" value="LOCAL" />
       <updated>1472890237618</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fix style button">
+      <created>1472935829063</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1472935829063</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278492000" />
+    <option name="totallyTimeSpent" value="279135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1046" extended-state="6" />
@@ -615,20 +635,14 @@
     <MESSAGE value="Doing list talks" />
     <MESSAGE value="Rollback to master" />
     <MESSAGE value="Add search query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add search query" />
+    <MESSAGE value="Fix style button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix style button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/themes/luxe/js/all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="1092" column="5" selection-start-line="1092" selection-start-column="5" selection-end-line="1092" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/partials/scripts.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -985,6 +999,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="45" column="36" selection-start-line="35" selection-start-column="32" selection-end-line="45" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
