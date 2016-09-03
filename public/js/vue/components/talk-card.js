@@ -3,7 +3,8 @@ Vue.component('talk-card', {
 
     props: {
         filterStartDate: String,
-        filterPrice: String
+        filterQuery: String,
+        order: Number
     },
 
     data: function () {
@@ -27,6 +28,9 @@ Vue.component('talk-card', {
         fetchtalkList: function () {
             $.getJSON('api/talks', function (talk) {
                 this.talks = talk;
+                for (var i=0; i < this.talks.length; i++) {
+                    this.talks[i].price = Number(this.talks[i].price);
+                }
             }.bind(this));
         }
     }
@@ -36,6 +40,7 @@ new Vue({
     el: '#mytalks',
     data: {
         searchStartDate: '',
-        searchPrice: ''
+        searchQuery: '',
+        order: 1
     }
 });

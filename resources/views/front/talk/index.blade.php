@@ -16,13 +16,14 @@
                 </div>
             </div>
 
-            @include('front.partials.navbar_search')
+            @include('front.talk.navbar-search-talks')
             <br>
 
             <div class="row">
                 <talk-card
                         :filter-start-date="searchStartDate"
-                        :filter-price="searchPrice"
+                        :filter-query="searchQuery"
+                        :order="order"
                 >
                 </talk-card>
             </div>
@@ -31,7 +32,7 @@
     </div>
 
     <template id="talk-template">
-        <div v-for="talk in talks | filterBy filterStartDate in 'start_date' | filterBy filterPrice in 'price'">
+        <div v-for="talk in talks | filterBy filterStartDate in 'start_date' | filterBy filterQuery in 'title' | orderBy 'price' order">
             <div class="col-md-4">
                 <div class="hotel-content">
                     <div class="hotel-grid" style="background-image: url(uploads/talks/@{{ talk.image }});">

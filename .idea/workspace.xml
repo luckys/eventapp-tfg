@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1feee202-07cf-48bc-bfdc-b89ad362ec55" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/front/event/navbar-search-events.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/front/talk/navbar-search-talks.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vue/components/event-card.js" afterPath="$PROJECT_DIR$/public/js/vue/components/event-card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vue/components/talk-card.js" afterPath="$PROJECT_DIR$/public/js/vue/components/talk-card.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/css/all.css" afterPath="$PROJECT_DIR$/public/themes/luxe/css/all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/js/bootstrap-datepicker/css/bootstrap-datepicker.min.css" afterPath="$PROJECT_DIR$/public/themes/luxe/js/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js" afterPath="$PROJECT_DIR$/public/themes/luxe/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/js/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" afterPath="$PROJECT_DIR$/public/themes/luxe/js/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/event/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/event/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/partials/navbar_search.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/partials/navbar_search.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" />
     </list>
     <ignored path="eventapp-tfg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/partials/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/partials/scripts.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/partials/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/partials/styles.blade.php" />
@@ -73,14 +78,12 @@
         <option value="$PROJECT_DIR$/resources/views/front/partials/styles.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/public/js/vue/components/talk-card.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TalkController.php" />
         <option value="$PROJECT_DIR$/app/Domain/Models/Talk.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/TalkRequest.php" />
         <option value="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_27_101221_create_talks_table.php" />
         <option value="$PROJECT_DIR$/resources/views/front/event/view-all.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
         <option value="$PROJECT_DIR$/app/Domain/Models/Event.php" />
@@ -94,10 +97,13 @@
         <option value="$PROJECT_DIR$/resources/views/admin/events/list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/talks/list.blade.php" />
         <option value="$PROJECT_DIR$/app/Application/Services/Talk/ListTalkService.php" />
-        <option value="$PROJECT_DIR$/public/themes/luxe/css/all.css" />
         <option value="$PROJECT_DIR$/public/js/vue/components/event-card.js" />
         <option value="$PROJECT_DIR$/resources/views/front/partials/navbar_search.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/event/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/luxe/css/all.css" />
+        <option value="$PROJECT_DIR$/resources/views/front/event/navbar-search-events.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/vue/components/talk-card.js" />
+        <option value="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" />
       </list>
     </option>
   </component>
@@ -157,6 +163,122 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talk" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -169,24 +291,24 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../coduxe/ovoopay-api" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="event-ca&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/js/vue/components/event-card.js&#10;Event&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/EventController.php&#10;route&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/routes.php&#10;ListT&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Application/Services/Talk/ListTalkService.php&#10;TalkC&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/TalkController.php&#10;EventCo&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/EventController.php&#10;Base&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Contracts/BaseRepository.php&#10;Eloque&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Repositories/Eloquent/EloquentRepository.php&#10;User&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/User.php&#10;Model&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/database/factories/ModelFactory.php&#10;Elo&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Repositories/Eloquent/EloquentRepository.php&#10;Talk&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Talk.php&#10;even&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/js/vue/components/event-card.js&#10;all.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/themes/luxe/css/all.css&#10;all&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/themes/luxe/css/all.css&#10;Main&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/MainController.php&#10;al.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/themes/luxe/css/all.css&#10;Even&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;BaseR&#9;null&#9;null&#10;MainC&#9;null&#9;null&#10;Event.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;user&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/User.php&#10;main&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/MainController.php&#10;EventC&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/EventController.php&#10;app&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/config/app.php&#10;Event.php&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;D&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/database/seeds/DatabaseSeeder.php&#10;See&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/database/seeds/DatabaseSeeder.php&#10;hea&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/resources/views/admin/partials/header_top.blade.php&#10;app.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/config/app.php&#10;eve&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;event&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;App&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Providers/AppServiceProvider.php&#10;User.php&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/User.php&#10;Appli&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Application/Services/ApplicationService.php&#10;UserC&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/UserController.php&#10;Signi&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Application/Services/User/SignInUserService.php&#10;postLogin&#9;null&#9;null&#10;header&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/resources/views/partials/header.blade.php&#10;router.p&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/vendor/symfony/routing/Router.php&#10;master&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/resources/views/layout/master_admin.blade.php&#10;Documentarian&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/vendor/mpociot/laravel-apidoc-generator/src/resources/views/documentarian.blade.php&#10;documentaria&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/js/vue/components/event-card.js&#10;ca&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/js/vue/components/talk-card.js&#10;all&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/themes/luxe/css/all.css&#10;event-ca&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/js/vue/components/event-card.js&#10;Event&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/EventController.php&#10;route&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/routes.php&#10;ListT&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Application/Services/Talk/ListTalkService.php&#10;TalkC&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/TalkController.php&#10;EventCo&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/EventController.php&#10;Base&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Contracts/BaseRepository.php&#10;Eloque&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Repositories/Eloquent/EloquentRepository.php&#10;User&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/User.php&#10;Model&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/database/factories/ModelFactory.php&#10;Elo&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Repositories/Eloquent/EloquentRepository.php&#10;Talk&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Talk.php&#10;even&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/js/vue/components/event-card.js&#10;all.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/themes/luxe/css/all.css&#10;Main&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/MainController.php&#10;al.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/public/themes/luxe/css/all.css&#10;Even&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;BaseR&#9;null&#9;null&#10;MainC&#9;null&#9;null&#10;Event.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;user&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/User.php&#10;main&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/MainController.php&#10;EventC&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/EventController.php&#10;app&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/config/app.php&#10;Event.php&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;D&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/database/seeds/DatabaseSeeder.php&#10;See&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/database/seeds/DatabaseSeeder.php&#10;hea&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/resources/views/admin/partials/header_top.blade.php&#10;app.&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/config/app.php&#10;eve&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;event&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/Event.php&#10;App&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Providers/AppServiceProvider.php&#10;User.php&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Domain/Models/User.php&#10;Appli&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Application/Services/ApplicationService.php&#10;UserC&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Http/Controllers/UserController.php&#10;Signi&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/app/Application/Services/User/SignInUserService.php&#10;postLogin&#9;null&#9;null&#10;header&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/resources/views/partials/header.blade.php&#10;router.p&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/vendor/symfony/routing/Router.php&#10;master&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/resources/views/layout/master_admin.blade.php&#10;Documentarian&#9;FILE&#9;file:///home/luckys/Projects/web/eventapp-tfg/vendor/mpociot/laravel-apidoc-generator/src/resources/views/documentarian.blade.php&#10;documentaria&#9;null&#9;null" />
     <property name="prop_add_unversioned_files" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/js/vue/components" />
-      <recent name="$PROJECT_DIR$/resources/views/front/talk" />
-      <recent name="$PROJECT_DIR$/public/themes/luxe/js" />
-      <recent name="$PROJECT_DIR$/resources/views/front/event" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/talks" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/uploads/talks" />
       <recent name="$PROJECT_DIR$/app/Domain/Models" />
       <recent name="$PROJECT_DIR$/public/events" />
       <recent name="$PROJECT_DIR$/resources/assets/js/components/partials" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/front/talk" />
+      <recent name="$PROJECT_DIR$/resources/views/front/event" />
+      <recent name="$PROJECT_DIR$/public/js/vue/components" />
+      <recent name="$PROJECT_DIR$/public/themes/luxe/js" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/talks" />
     </key>
   </component>
   <component name="RunManager">
@@ -290,6 +412,7 @@
       <workItem from="1472882516570" duration="143000" />
       <workItem from="1472882730371" duration="6919000" />
       <workItem from="1472889667089" duration="5296000" />
+      <workItem from="1472924439765" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="Configuring Code Climate">
       <created>1471116275644</created>
@@ -428,14 +551,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270081000" />
+    <option name="totallyTimeSpent" value="272293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1046" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28992498" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29367632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -505,20 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/EventRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="31" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Application/Services/Event/ShowEventService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -647,13 +756,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/talk/view-all.blade.php" />
-    <entry file="file://$PROJECT_DIR$/public/js/vue/components/talk-card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Application/Services/Talk/CreateTalkService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
@@ -759,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/talk/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/talks/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -821,40 +916,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/luxe/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="9898" column="19" selection-start-line="9898" selection-start-column="19" selection-end-line="9898" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/partials/navbar_search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="120">
+          <caret line="5" column="64" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/event/navbar-search-events.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/luxe/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="9809" column="1" selection-start-line="9809" selection-start-column="1" selection-end-line="9809" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/talk/navbar-search-talks.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/event/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#1218#1283#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="456">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/vue/components/event-card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="768">
+          <caret line="32" column="17" selection-start-line="30" selection-start-column="16" selection-end-line="32" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vue/components/talk-card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/talk/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="34" column="134" selection-start-line="34" selection-start-column="134" selection-end-line="34" selection-end-column="134" />
           <folding />
         </state>
       </provider>

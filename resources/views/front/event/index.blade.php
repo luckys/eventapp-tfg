@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            @include('front.partials.navbar_search')
+            @include('front.event.navbar-search-events')
             <br>
 
             <div class="row">
