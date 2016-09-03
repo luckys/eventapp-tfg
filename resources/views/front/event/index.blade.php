@@ -31,7 +31,7 @@
     </div>
 
     <template id="event-template">
-        <div v-for="event in events | filterBy filterStartDate in 'start_date' | filterBy filterPrice in 'price'">
+        <div v-for="event in events | filterBy filterStartDate in 'start_date' | filterBy filterPrice in 'price' | orderBy 'price' order'">
             <div class="col-md-4">
                 <div class="hotel-content">
                     <div class="hotel-grid" style="background-image: url(uploads/events/@{{ event.image }});">

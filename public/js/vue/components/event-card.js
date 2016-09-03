@@ -27,6 +27,9 @@ Vue.component('event-card', {
         fetchEventList: function () {
             $.getJSON('api/events', function (event) {
                 this.events = event;
+                for (var i=0; i < this.events.length; i++) {
+                    this.events[i].price = Number(this.events[i].price);
+                }
             }.bind(this));
         }
     }
@@ -38,4 +41,5 @@ new Vue({
         searchStartDate: '',
         searchPrice: ''
     }
+
 });
