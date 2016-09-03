@@ -50,7 +50,6 @@
 
                         </tbody>
                     </table>
-                    <div class="pagination"> {!! $events->render() !!} </div>
                 </div>
                 </div>
             </section>

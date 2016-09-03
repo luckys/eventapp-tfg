@@ -32,6 +32,15 @@ interface BaseRepository
     public function all($columns = ['*']);
 
     /**
+     * Retrieve all data of repository
+     *
+     * @param array $condition
+     * @param array $columns
+     * @return mixed
+     */
+    public function allWhere(array $condition, $columns = ['*']);
+
+    /**
      * Return the last record saved
      *
      * @return mixed

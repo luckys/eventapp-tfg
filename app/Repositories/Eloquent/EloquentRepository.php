@@ -120,6 +120,22 @@ abstract class EloquentRepository implements BaseRepository
     }
 
     /**
+     * Retrieve all data of repository
+     *
+     * @param array $condition
+     * @param array $columns
+     * @return mixed
+     */
+    public function allWhere(array $condition, $columns = ['*'])
+    {
+        $results = $this->model->where($condition)->get($columns);
+
+        $this->resetModel();
+
+        return $results;
+    }
+
+    /**
      * Find data by id
      *
      * @param       $id

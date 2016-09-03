@@ -27,14 +27,12 @@
                         <div class="price"><small>Precio</small><span>@{{ event.price }} €</span></div>
                         <a class="book-now text-center" href=""> Comprar</a>
                     </div>
-                    <div class="desc">
-                        <h3><a href="{{ url('events/show') }}/@{{ event.id }}">@{{ event.name }}</a></h3>
-                        <p>@{{ event.description | truncate '100' }}</p>
+                    <div class="desc fix-text-event">
+                        <h3><a href="{{ url('events/show') }}/@{{ event.id }}"><strong>@{{ event.name }}</strong></a></h3>
                         <h4>
-                            <span class="label label-default">Comienzo:</span>  @{{ event.start_date }}
+                            <i class="fa fa-calendar"></i>  @{{ event.start_date }}
                         </h4>
-                        <h4><span class="label label-default">Fin:</span>  @{{ event.end_date }}</h4>
-                        <h4><span class="label label-default">Dirección:</span>  @{{ event.address }}</h4>
+                        <h3><i class="fa fa-map-marker"></i>  @{{ event.address}}</h3>
                     </div>
                 </div>
             </div>
@@ -42,47 +40,7 @@
     </template>
 @endsection
 
-
-
 @section('scripts')
     <script src="{{ asset('js/vue/vue.js') }}"></script>
-    <script>
-
-        Vue.component('event-card', {
-            template: '#event-template',
-
-            data: function () {
-                return {
-                    events: []
-                }
-            },
-
-            filters: {
-
-                truncate: function(string, value) {
-                    return string.substring(0, value) + '...';
-                }
-
-            },
-
-            created: function () {
-                this.fetchEventList();
-            },
-
-            methods: {
-                fetchEventList: function () {
-                    $.getJSON('api/events', function (event) {
-                        this.events = event;
-
-                        console.log(event);
-
-                    }.bind(this));
-                }
-            }
-        });
-
-        new Vue({
-            el: '#myEvents'
-        });
-    </script>
+    <script src="{{ asset('js/vue/components/event-card.js') }}"></script>
 @endsection

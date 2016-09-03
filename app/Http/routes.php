@@ -32,8 +32,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('talks', 'TalkController@store');
 });
 
-Route::get('api/events', 'EventController@index');
+Route::group(['prefix' => 'api'], function () {
+    Route::get('events', 'EventController@index');
+    Route::get('talks', 'TalkController@index');
+});
+
 Route::get('events', 'EventController@allEvents');
 Route::get('events/show/{id}', 'EventController@show');
+Route::get('talks', 'TalkController@allTalks');
 
 

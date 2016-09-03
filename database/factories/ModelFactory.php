@@ -11,35 +11,47 @@
 |
 */
 
-use EventApp\Domain\Models\Event;
 use EventApp\Domain\Models\User;
 
-$factory->define(User::class, function (Faker\Generator $faker) {
+$factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $faker) {
+
     return [
         'id' => '',
-        'email' => $faker->email,
-        'password' => 'secret',
-        'firstname' => $faker->name,
+        'email' => 'speaker@demo.com',
+        'password' => bcrypt('speaker'),
+        'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
-        'company' => $faker->company,
-        'biography' => $faker->sentence,
-        'url_github' => 'http://github.com/user',
-        'url_twitter' => 'http://twitter.com/user',
-        'photo' => 'imagen.jpg',
-        'remember_token' => str_random(10),
     ];
 });
 
-$factory->define(Event::class, function (Faker\Generator $faker) {
+$factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator $faker) {
+
     return [
         'id' => '',
-        'user_id' => $faker->uuid,
-        'name' => 'Primer Evento',
-        'description' => $faker->paragraphs,
-        'start_date' => $faker->dateTime,
-        'end_date' => $faker->dateTime,
+        'author_id' => User::first()->id,
+        'name' => $faker->sentence,
+        'description' => $faker->sentence,
+        'start_date' => $faker->dateTimeThisMonth,
+        'end_date' => $faker->dateTimeThisMonth,
         'address' => $faker->address,
-        'price' => 50,
-        'avatar' => $faker->imageUrl(),
+        'price' => $faker->randomFloat(2, 0, 500),
+        'image' => 'egege.jpg',
+    ];
+});
+
+$factory->define(EventApp\Domain\Models\Talk::class, function (Faker\Generator $faker) {
+
+    return [
+        'id' => '',
+        'speaker_id' => User::first()->id,
+        'title' => $faker->sentence,
+        'description' => $faker->sentence,
+        'type' => 'Seminario',
+        'level' => 'Intermedio',
+        'start_date' => $faker->dateTimeThisMonth,
+        'length' => $faker->numberBetween(10, 90),
+        'address' => $faker->address,
+        'price' => $faker->randomFloat(2, 0, 500),
+        'image' => 'feqgegeg.jpg',
     ];
 });

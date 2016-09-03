@@ -10373,6 +10373,19 @@ div.cs-select span {
   font-size: 20px;
   margin: 0 0 20px 0;
 }
+
+.fix-text-event {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 200px;
+}
+
+.fix-text-talk {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 250px;
+}
+
 #fh5co-hotel-section .hotel-content .desc h3 a {
   color: rgba(0, 0, 0, 0.7);
 }

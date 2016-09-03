@@ -52,7 +52,6 @@
 
                         </tbody>
                     </table>
-                    <div class="pagination"> {!! $talks->render() !!} </div>
                 </div>
                 </div>
             </section>

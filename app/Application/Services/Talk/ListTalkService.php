@@ -20,7 +20,7 @@ class ListTalkService extends TalkService
     public function execute($request = null, $id = null)
     {
         try {
-            return $this->talk->paginate();
+            return $this->talk->allWhere(['speaker_id' => auth()->user()->id]);
         } catch (\Exception $e) {
             return $e->getMessage();
         }
@@ -32,7 +32,24 @@ class ListTalkService extends TalkService
     public function getAllTalks()
     {
         try {
-            return $this->talk->orderBy('created_at', 'desc')->all();
+            $talks = [];
+            $datas =  $this->talk
+                           ->orderBy('created_at', 'desc')
+                           ->with(['speaker'])
+                           ->all();
+            foreach ($datas as $talk) {
+                $result = [
+                    'id' => $talk->id,
+                    'title' => $talk->title,
+                    'start_date' => $talk->start_date,
+                    'address' => $talk->address,
+                    'price' => $talk->price,
+                    'image' => $talk->image,
+                    'speaker' => $talk->speaker->fullname,
+                ];
+                array_push($talks, $result);
+            }
+            return $talks;
         } catch (\Exception $e) {
             return $e->getMessage();
         }

@@ -20,7 +20,7 @@ class ListEventService extends EventService
     public function execute($request = null, $id = null)
     {
         try {
-            return $this->event->paginate();
+            return $this->event->allWhere(['author_id' => auth()->user()->id]);
         } catch (\Exception $e) {
             return $e->getMessage();
         }

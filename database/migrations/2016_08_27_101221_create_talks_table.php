@@ -14,7 +14,7 @@ class CreateTalksTable extends Migration
     {
         Schema::create('talks', function (Blueprint $table) {
             $table->uuid('id')->unique()->index();
-            $table->uuid('speaker_id')->unique();
+            $table->uuid('speaker_id');
             $table->foreign('speaker_id')
                   ->references('id')
                   ->on('users');
@@ -42,7 +42,7 @@ class CreateTalksTable extends Migration
             $table->foreign('talk_id')
                   ->references('id')->on('talks');
             $table->timestamps();
-            $table->primary(['event_id', 'talk_id']);
+
         });
     }
 

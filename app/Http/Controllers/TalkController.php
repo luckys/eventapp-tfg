@@ -15,11 +15,12 @@ class TalkController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param ListTalkService $service
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ListTalkService $service)
     {
-        //
+        return $service->getAllTalks();
     }
 
     public function list(ListTalkService $service)
@@ -37,6 +38,11 @@ class TalkController extends Controller
     public function create()
     {
         return view('admin.talks.create');
+    }
+
+    public function allTalks()
+    {
+        return view('front.talk.index');
     }
 
     /**
