@@ -30,7 +30,7 @@ class EventRequest extends Request
             'end_date' => 'required',
             'address' => 'required|string',
             'price' => 'required|numeric',
-            'image' => 'required|image',
+            'image' => 'image',
         ];
     }
 }

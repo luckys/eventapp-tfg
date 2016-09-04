@@ -2,13 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: luckys
- * Date: 8/22/16
- * Time: 1:32 PM
+ * Date: 9/4/16
+ * Time: 12:47 PM
  */
 
 namespace EventApp\Application\Services\Event;
 
-class CreateEventService extends EventService
+
+use Illuminate\Support\Facades\File;
+
+class UpdateEventService extends EventService
 {
 
     /**
@@ -20,7 +23,12 @@ class CreateEventService extends EventService
     {
         try {
             $path = public_path().'/uploads/events/';
-            $fileName = $request->file('image');
+            $fileName = $this->event->find($id)->image;
+            if (!is_null($request->file('image'))) {
+                File::delete($path.$fileName);
+                $fileName = $request->file('image')->getClientOriginalName();
+                $request->file('image')->move($path, $fileName);
+            }
             $datas = [
                 'author_id' => auth()->user()->id,
                 'name' => $request->name,
@@ -29,10 +37,10 @@ class CreateEventService extends EventService
                 'end_date' => $request->end_date,
                 'address' => $request->address,
                 'price' => $request->price,
-                'image' => $fileName->getClientOriginalName(),
+                'image' => $fileName,
             ];
-            $this->event->create($datas);
-            $request->file('image')->move($path, $fileName->getClientOriginalName());
+            $this->event->update($datas, $id);
+
         } catch (\Exception $e) {
             return $e->getMessage();
         }

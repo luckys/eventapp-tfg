@@ -23,7 +23,7 @@ class CreateEventsTable extends Migration
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->string('address');
-            $table->decimal('price', 5, 2);
+            $table->decimal('price', 8, 2);
             $table->string('image')->nullable();
             $table->timestamps();
             $table->primary('id');

@@ -5,6 +5,7 @@ namespace EventApp\Http\Controllers;
 use EventApp\Application\Services\Event\CreateEventService;
 use EventApp\Application\Services\Event\ListEventService;
 use EventApp\Application\Services\Event\ShowEventService;
+use EventApp\Application\Services\Event\UpdateEventService;
 use EventApp\Http\Requests\EventRequest;
 use Illuminate\Http\Request;
 
@@ -94,24 +95,30 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     * @param ShowEventService $service
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, ShowEventService $service)
     {
-        //
+        $event = $service->execute(null, $id);
+
+        return view('admin.events.edit', compact('event'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param EventRequest|Request $request
+     * @param  int $id
+     * @param UpdateEventService $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EventRequest $request, $id, UpdateEventService $service)
     {
-        //
+        $service->execute($request, $id);
+
+        return redirect('admin/events');
     }
 
     /**

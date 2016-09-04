@@ -25,7 +25,7 @@ class CreateTalksTable extends Migration
             $table->dateTime('start_date');
             $table->smallInteger('length')->nullable();
             $table->string('address');
-            $table->decimal('price', 5, 2)->default(0.00);
+            $table->decimal('price', 8, 2)->default(0.00);
             $table->string('url_slide')->nullable();
             $table->string('file')->nullable();
             $table->string('image')->nullable();
