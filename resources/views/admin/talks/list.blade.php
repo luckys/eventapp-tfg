@@ -39,7 +39,7 @@
                                     <a class="btn btn-default" href="{{ url('admin/talks/show/'.$talk->id) }}">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a class="btn btn-default" data-toggle="button">
+                                    <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/edit/') }}">
                                         <i class="fa fa-pencil"></i>
                                     </a>
                                     <a class="btn btn-default" data-toggle="button">

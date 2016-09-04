@@ -2,8 +2,6 @@
 
 namespace EventApp\Http\Requests;
 
-use EventApp\Http\Requests\Request;
-
 class TalkRequest extends Request
 {
     /**
@@ -29,6 +27,7 @@ class TalkRequest extends Request
             'start_date' => 'required',
             'address' => 'required|string',
             'price' => 'required|numeric',
+            'image' => 'image',
         ];
     }
 }

@@ -33,6 +33,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('talks', 'TalkController@list');
     Route::get('talks/create', 'TalkController@create');
     Route::post('talks', 'TalkController@store');
+    Route::get('talks/{id}/edit', 'TalkController@edit');
+    Route::put('talks/{id}', 'TalkController@update');
 });
 
 Route::group(['prefix' => 'api'], function () {

@@ -9,7 +9,9 @@
 namespace EventApp\Application\Services\Talk;
 
 
-class CreateTalkService extends TalkService
+use Illuminate\Support\Facades\File;
+
+class UpdateTalkService extends TalkService
 {
 
     /**
@@ -22,8 +24,18 @@ class CreateTalkService extends TalkService
         try {
             $pathImage = public_path().'/uploads/talks/';
             $pathFile = public_path().'/uploads/talks/files/';
-            $imageName = $request->file('image');
-            $fileName = $request->file('file');
+            $imageName = $this->talk->find($id)->image;
+            $fileName = $this->talk->find($id)->file;
+            if(!is_null($request->file('file'))) {
+                File::delete($pathFile.$fileName);
+                $fileName = $request->file('file')->getClientOriginalName();
+                $request->file('file')->move($pathFile, $fileName);
+            }
+            if(!is_null($request->file('image'))) {
+                File::delete($pathImage.$imageName);
+                $imageName = $request->file('image')->getClientOriginalName();
+                $request->file('image')->move($pathImage, $imageName);
+            }
             $datas = [
                 'speaker_id' => auth()->user()->id,
                 'title' => $request->title,
@@ -35,16 +47,12 @@ class CreateTalkService extends TalkService
                 'address' => $request->address,
                 'price' => $request->price,
                 'url_slide' => $request->url_slide,
-                'file' => $fileName ? $fileName->getClientOriginalName() : '',
-                'image' => $imageName ? $imageName->getClientOriginalName() : '',
+                'file' => $fileName,
+                'image' => $imageName,
                 'notes' => $request->notes
             ];
 
-            $this->talk->create($datas);
-            if($fileName)
-            $request->file('file')->move($pathFile, $fileName->getClientOriginalName());
-            if($imageName)
-            $request->file('image')->move($pathImage, $imageName->getClientOriginalName());
+            $this->talk->update($datas, $id);
         } catch (\Exception $e) {
             return $e->getMessage();
         }

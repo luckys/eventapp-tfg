@@ -5,6 +5,7 @@ namespace EventApp\Http\Controllers;
 use EventApp\Application\Services\Talk\CreateTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
 use EventApp\Application\Services\Talk\ShowTalkService;
+use EventApp\Application\Services\Talk\UpdateTalkService;
 use EventApp\Http\Requests\TalkRequest;
 use Illuminate\Http\Request;
 
@@ -77,24 +78,30 @@ class TalkController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     * @param ShowTalkService $service
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, ShowTalkService $service)
     {
-        //
+        $talk = $service->execute(null, $id);
+
+        return view('admin.talks.edit', compact('talk'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param TalkRequest $request
+     * @param  int $id
+     * @param UpdateTalkService $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TalkRequest $request, $id, UpdateTalkService $service)
     {
-        //
+        $service->execute($request, $id);
+
+        return redirect('admin/talks');
     }
 
     /**
