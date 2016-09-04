@@ -7,12 +7,13 @@ use Ramsey\Uuid\Uuid;
 
 class Talk extends Model
 {
+    use UuidModel;
+
     protected $table = 'talks';
 
     public $incrementing = false;
 
     protected $fillable = [
-        'id',
         'speaker_id',
         'title',
         'description',
@@ -27,11 +28,6 @@ class Talk extends Model
         'image',
         'notes'
     ];
-
-    public function setIdAttribute()
-    {
-        $this->attributes['id'] = Uuid::uuid4()->toString();
-    }
 
     public function speaker()
     {

@@ -7,12 +7,13 @@ use Ramsey\Uuid\Uuid;
 
 class Event extends Model
 {
+    use UuidModel;
+
     protected $table = 'events';
 
     public $incrementing = false;
 
     protected $fillable = [
-        'id',
         'author_id',
         'name',
         'description',
@@ -23,10 +24,6 @@ class Event extends Model
         'image'
     ];
 
-    public function setIdAttribute()
-    {
-        $this->attributes['id'] = Uuid::uuid4()->toString();
-    }
 
     public function user()
     {

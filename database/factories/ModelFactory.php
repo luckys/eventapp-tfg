@@ -16,7 +16,6 @@ use EventApp\Domain\Models\User;
 $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $faker) {
 
     return [
-        'id' => '',
         'email' => 'speaker@demo.com',
         'password' => bcrypt('speaker'),
         'firstname' => $faker->firstName,
@@ -27,7 +26,6 @@ $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $
 $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator $faker) {
 
     return [
-        'id' => '',
         'author_id' => User::first()->id,
         'name' => $faker->sentence,
         'description' => $faker->sentence,
@@ -42,7 +40,6 @@ $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator 
 $factory->define(EventApp\Domain\Models\Talk::class, function (Faker\Generator $faker) {
 
     return [
-        'id' => '',
         'speaker_id' => User::first()->id,
         'title' => $faker->sentence,
         'description' => $faker->sentence,

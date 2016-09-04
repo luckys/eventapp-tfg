@@ -41,6 +41,7 @@ class CreateTalksTable extends Migration
             $table->uuid('talk_id')->index();
             $table->foreign('talk_id')
                   ->references('id')->on('talks');
+            $table->dateTime('initial_date');
             $table->timestamps();
 
         });

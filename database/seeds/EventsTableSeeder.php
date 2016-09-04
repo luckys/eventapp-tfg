@@ -21,6 +21,7 @@ class EventsTableSeeder extends Seeder
             DB::table('event_talk')->insert([
                 'event_id' => Event::all()->random()->id,
                 'talk_id' => Talk::all()->random()->id,
+                'initial_date' => Carbon\Carbon::now(),
                 'created_at' => Carbon\Carbon::now(),
                 'updated_at' => Carbon\Carbon::now(),
             ]);

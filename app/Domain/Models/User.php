@@ -2,7 +2,6 @@
 
 namespace EventApp\Domain\Models;
 
-use Ramsey\Uuid\Uuid;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -15,7 +14,7 @@ class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword;
+    use Authenticatable, Authorizable, CanResetPassword, UuidModel;
 
     /**
      * The database table used by the model.
@@ -32,7 +31,6 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $fillable = [
-        'id',
         'email',
         'password',
         'firstname',
@@ -50,11 +48,6 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['remember_token'];
-
-    public function setIdAttribute()
-    {
-        $this->attributes['id'] = Uuid::uuid4()->toString();
-    }
 
     public function setPasswordAttribute($value)
     {
