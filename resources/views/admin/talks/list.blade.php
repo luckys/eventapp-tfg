@@ -3,6 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
+            <div id="success_message"></div>
             <section class="panel">
                 <header class="panel-heading">
                     Administración de Charlas
@@ -27,7 +28,7 @@
 
                         @foreach($talks as $talk)
 
-                        <tr>
+                        <tr data-id="{{ $talk->id }}">
                             <td>{{ $talk->title }}</td>
                             <td>{{ $talk->type }}</td>
                             <td>{{ $talk->level }}</td>
@@ -42,7 +43,7 @@
                                     <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/edit/') }}">
                                         <i class="fa fa-pencil"></i>
                                     </a>
-                                    <a class="btn btn-default" data-toggle="button">
+                                    <a class="btn btn-default btn-del" data-toggle="button">
                                         <i class="fa fa-trash-o"></i>
                                     </a>
                                 </p>
@@ -57,4 +58,12 @@
             </section>
         </div>
     </div>
+
+    {!! Form::open(['route' => ['admin.talks.destroy', ':ID'], 'method' => 'DELETE', 'id' => 'myForm']) !!}
+    {!! Form::close() !!}
+
 @stop
+
+@section('scripts')
+    <script src="{{ asset('js/ajax.js') }}"></script>
+@endsection

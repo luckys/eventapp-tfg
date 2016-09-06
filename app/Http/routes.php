@@ -36,6 +36,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('talks', 'TalkController@store');
     Route::get('talks/{id}/edit', 'TalkController@edit');
     Route::put('talks/{id}', 'TalkController@update');
+    Route::delete('talks/{id}', ['as' => 'admin.talks.destroy', 'uses' => 'TalkController@destroy']);
 });
 
 Route::group(['prefix' => 'api'], function () {

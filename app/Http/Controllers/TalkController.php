@@ -3,6 +3,7 @@
 namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Talk\CreateTalkService;
+use EventApp\Application\Services\Talk\DeleteTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
 use EventApp\Application\Services\Talk\ShowTalkService;
 use EventApp\Application\Services\Talk\UpdateTalkService;
@@ -107,11 +108,16 @@ class TalkController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
+     * @param DeleteTalkService $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, DeleteTalkService $service)
     {
-        //
+        $service->execute(null, $id);
+
+        $message = "La charla ha sido eliminado correctamente";
+
+        return response()->json(['message' => $message]);
     }
 }
