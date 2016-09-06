@@ -1,41 +1,11 @@
 $(function(){
-
-	addAndEditUsingAjax();
 	deleteUsingAjax();
 
 });
 
-function addAndEditUsingAjax(){
-	$('#btn-form').click(function(event) {
-
-		var formId = '.cmxform';
-
-		event.preventDefault();
-		
-		$.ajax({
-			headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') },
-			url: $(formId).attr('action'),
-			type: $(formId).attr('method'),
-			data: $(formId).serialize(),
-			dataType: 'html',
-			success: function(result){
-				if ($(formId).find("input:first-child").attr('value') == 'PUT') {
-					redirectPage(result);
-				}
-				else{
-					$(formId)[0].reset();
-					printSuccessMessage(result);
-				}
-			},
-			error: function(){
-				console.log('Error');
-			}
-		});
-	});
-}
 
 function deleteUsingAjax(){
-	$('.btn-danger').click(function(event) {
+	$('.btn-del').click(function(event) {
 		event.preventDefault();
 
 		var row = $(this).parents('tr');
@@ -71,7 +41,3 @@ function printSuccessMessage(message){
 	$("#myAlert").delay(3000).fadeOut();
 }
 
-function redirectPage(result){
-	var $jsonObject = jQuery.parseJSON(result);
-	$(location).attr('href',$jsonObject.url);
-}

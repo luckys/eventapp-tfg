@@ -29,6 +29,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('events/show/{id}', 'EventController@showEvent');
     Route::get('events/{id}/edit', 'EventController@edit');
     Route::put('events/{id}', 'EventController@update');
+    Route::delete('events/{id}', ['as' => 'admin.events.destroy', 'uses' => 'EventController@destroy']);
 
     Route::get('talks', 'TalkController@list');
     Route::get('talks/create', 'TalkController@create');

@@ -3,6 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
+            <div id="success_message"></div>
             <section class="panel">
                 <header class="panel-heading">
                     Administración de Eventos
@@ -26,7 +27,7 @@
 
                         @foreach($events as $event)
 
-                        <tr>
+                        <tr data-id="{{ $event->id }}">
                             <td>{{ $event->name }}</td>
                             <td>{{ $event->start_date }}</td>
                             <td>{{ $event->end_date }}</td>
@@ -40,7 +41,7 @@
                                     <a class="btn btn-default" href="{{ url('admin/events/'.$event->id.'/edit/') }}">
                                         <i class="fa fa-pencil"></i>
                                     </a>
-                                    <a class="btn btn-default" data-toggle="button">
+                                    <a class="btn btn-default btn-del" data-toggle="button">
                                         <i class="fa fa-trash-o"></i>
                                     </a>
                                 </p>
@@ -55,4 +56,11 @@
             </section>
         </div>
     </div>
+
+    {!! Form::open(['route' => ['admin.events.destroy', ':ID'], 'method' => 'DELETE', 'id' => 'myForm']) !!}
+    {!! Form::close() !!}
 @stop
+
+@section('scripts')
+    <script src="{{ asset('js/ajax.js') }}"></script>
+@endsection
