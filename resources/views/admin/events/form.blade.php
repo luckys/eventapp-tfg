@@ -44,6 +44,15 @@
 </div>
 
 <div class="form-group">
+    <label  class="col-lg-2 col-sm-2 control-label">Aforo</label>
+    <div class="col-lg-8">
+
+        {!! Form::text('capacity', null, ['class' => 'form-control']) !!}
+
+    </div>
+</div>
+
+<div class="form-group">
     <label  class="col-lg-2 col-sm-2 control-label">Dirección</label>
     <div class="col-lg-8">
 

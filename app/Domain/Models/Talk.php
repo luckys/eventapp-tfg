@@ -22,6 +22,8 @@ class Talk extends Model
         'start_date',
         'length',
         'address',
+        'capacity',
+        'total_tickets',
         'price',
         'url_slide',
         'file',

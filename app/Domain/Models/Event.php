@@ -20,6 +20,8 @@ class Event extends Model
         'start_date',
         'end_date',
         'address',
+        'capacity',
+        'total_tickets',
         'price',
         'image'
     ];

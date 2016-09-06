@@ -32,6 +32,8 @@ $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator 
         'start_date' => $faker->dateTimeThisMonth,
         'end_date' => $faker->dateTimeThisMonth,
         'address' => $faker->address,
+        'capacity' => 200,
+        'total_tickets' => 200,
         'price' => $faker->randomFloat(2, 0, 500),
         'image' => 'egege.jpg',
     ];
@@ -48,6 +50,8 @@ $factory->define(EventApp\Domain\Models\Talk::class, function (Faker\Generator $
         'start_date' => $faker->dateTimeThisMonth,
         'length' => $faker->numberBetween(10, 90),
         'address' => $faker->address,
+        'capacity' => 1,
+        'total_tickets' => 1,
         'price' => $faker->randomFloat(2, 0, 500),
         'image' => 'feqgegeg.jpg',
     ];

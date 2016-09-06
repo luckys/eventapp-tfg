@@ -23,6 +23,8 @@ class CreateEventsTable extends Migration
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->string('address');
+            $table->integer('capacity');
+            $table->integer('total_tickets');
             $table->decimal('price', 8, 2);
             $table->string('image')->nullable();
             $table->timestamps();

@@ -29,6 +29,7 @@ class EventRequest extends Request
             'start_date' => 'required',
             'end_date' => 'required',
             'address' => 'required|string',
+            'capacity' => 'required|numeric',
             'price' => 'required|numeric',
             'image' => 'image',
         ];

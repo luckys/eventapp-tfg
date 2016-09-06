@@ -45,6 +45,8 @@ class UpdateTalkService extends TalkService
                 'start_date' => $request->start_date,
                 'length' => $request->length,
                 'address' => $request->address,
+                'capacity' => $request->capacity,
+                'total_tickets' => $request->capacity,
                 'price' => $request->price,
                 'url_slide' => $request->url_slide,
                 'file' => $fileName,

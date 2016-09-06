@@ -28,6 +28,8 @@ class CreateEventService extends EventService
                 'start_date' => $request->start_date,
                 'end_date' => $request->end_date,
                 'address' => $request->address,
+                'capacity' => $request->capacity,
+                'total_tickets' => $request->capacity,
                 'price' => $request->price,
                 'image' => $fileName->getClientOriginalName(),
             ];

@@ -26,6 +26,7 @@ class TalkRequest extends Request
             'description' => 'required|string',
             'start_date' => 'required',
             'address' => 'required|string',
+            'capacity' => 'required|numeric',
             'price' => 'required|numeric',
             'image' => 'image',
         ];
