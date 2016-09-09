@@ -12,7 +12,7 @@
             </div>
             <div class="row" id="myEvents">
 
-                <event-card></event-card>
+                <event-card url="api/events"></event-card>
 
             </div>
 

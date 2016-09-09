@@ -24,6 +24,7 @@
                         :filter-start-date="searchStartDate"
                         :filter-query="searchQuery"
                         :order="order"
+                        url="api/events"
                 >
                 </event-card>
             </div>
