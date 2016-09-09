@@ -10,10 +10,13 @@ class MainController extends Controller
 {
     public function index()
     {
-        $events = Event::take(3)->get();
+        $events = Event::take(6)->get();
 
-        $talks = Talk::take(3)->get();
+        $talks = Talk::take(6)->get();
 
-        return view('front.main', compact('events', 'talks'));
+        return response()->json([
+            'events' => $events,
+            'talks' => $talks
+        ]);
     }
 }

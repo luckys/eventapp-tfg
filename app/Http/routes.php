@@ -42,6 +42,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::group(['prefix' => 'api'], function () {
     Route::get('events', 'EventController@index');
     Route::get('talks', 'TalkController@index');
+    Route::get('all', 'MainController@index');
 });
 
 Route::get('events', 'EventController@allEvents');
