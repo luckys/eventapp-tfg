@@ -34,6 +34,6 @@ class Event extends Model
 
     public function talks()
     {
-        return $this->belongsToMany(Talk::class)->withTimestamps();
+        return $this->belongsToMany(Talk::class, 'event_talk')->withTimestamps();
     }
 }

@@ -1,16 +1,17 @@
 @extends('admin.master')
 
 @section('content')
+    <br>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-10 col-md-offset-1">
             <div id="success_message"></div>
-            <section class="panel">
+            <section class="panel panel-default">
                 <header class="panel-heading">
                     Administración de Charlas
                 </header>
                 <div class="panel-body">
                     <a class="btn btn-default" href="{{ url('admin/talks/create') }}" role="button">
-                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-plus"> Nueva Charla</i>
                     </a>
                     <table class="table table-hover general-table">
                         <thead>
@@ -37,6 +38,9 @@
                             <td>{{ $talk->price }} €</td>
                             <td>
                                 <p>
+                                    <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/subscribe/') }}">
+                                        <i class="fa fa-book"></i>
+                                    </a>
                                     <a class="btn btn-default" href="{{ url('admin/talks/show/'.$talk->id) }}">
                                         <i class="fa fa-eye"></i>
                                     </a>
@@ -54,7 +58,6 @@
                         </tbody>
                     </table>
                 </div>
-                </div>
             </section>
         </div>
     </div>
@@ -62,7 +65,7 @@
     {!! Form::open(['route' => ['admin.talks.destroy', ':ID'], 'method' => 'DELETE', 'id' => 'myForm']) !!}
     {!! Form::close() !!}
 
-@stop
+@endsection
 
 @section('scripts')
     <script src="{{ asset('js/ajax.js') }}"></script>

@@ -6,6 +6,7 @@ use EventApp\Application\Services\Talk\CreateTalkService;
 use EventApp\Application\Services\Talk\DeleteTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
 use EventApp\Application\Services\Talk\ShowTalkService;
+use EventApp\Application\Services\Talk\SubscribeTalkService;
 use EventApp\Application\Services\Talk\UpdateTalkService;
 use EventApp\Http\Requests\TalkRequest;
 use Illuminate\Http\Request;
@@ -24,6 +25,24 @@ class TalkController extends Controller
     public function index(ListTalkService $service)
     {
         return $service->getAllTalks();
+    }
+
+    public function formSubscribe($id, SubscribeTalkService $service, ShowTalkService $serviceShow)
+    {
+        $talk = $serviceShow->execute(null, $id);
+
+        $events = $service->getEventsSubscribible($id);
+
+        $talk_event = $service->getTalksSigned($id);
+
+        return view('admin.talks.subscribe-talk', compact('talk', 'events', 'talk_event'));
+    }
+
+    public function subscribeTalk(Request $request, $id, SubscribeTalkService $service)
+    {
+        $service->execute($request, $id);
+
+        return redirect()->back()->with('message', 'Charla subscrita correctamente');
     }
 
     public function list(ListTalkService $service)

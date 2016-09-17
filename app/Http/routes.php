@@ -35,7 +35,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('talks/create', 'TalkController@create');
     Route::post('talks', 'TalkController@store');
     Route::get('talks/{id}/edit', 'TalkController@edit');
+    Route::get('talks/{id}/subscribe', 'TalkController@formSubscribe');
     Route::put('talks/{id}', 'TalkController@update');
+    Route::put('talks/{id}/subscribe/events', ['as' => 'admin.talks.subscribe', 'uses' => 'TalkController@subscribeTalk']);
     Route::delete('talks/{id}', ['as' => 'admin.talks.destroy', 'uses' => 'TalkController@destroy']);
 });
 

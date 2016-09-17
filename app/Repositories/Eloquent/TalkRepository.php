@@ -22,4 +22,9 @@ class TalkRepository extends EloquentRepository implements TalkRepositoryInterfa
     {
         return 'EventApp\Domain\Models\Talk';
     }
+
+    public function subscribe(array $data)
+    {
+        $this->model()->events()->attach($data);
+    }
 }

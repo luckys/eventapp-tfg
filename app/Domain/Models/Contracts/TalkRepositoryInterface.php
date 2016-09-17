@@ -11,5 +11,5 @@ namespace EventApp\Domain\Models\Contracts;
 
 interface TalkRepositoryInterface
 {
-
+    public function subscribe(array $data);
 }
