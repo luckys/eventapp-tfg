@@ -9,6 +9,8 @@
 namespace EventApp\Application\Services\Talk;
 
 
+use EventApp\Domain\Models\Event;
+
 class ListTalkService extends TalkService
 {
 
@@ -50,6 +52,40 @@ class ListTalkService extends TalkService
                 array_push($talks, $result);
             }
             return $talks;
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function getEventsSubscribible($id)
+    {
+        try {
+            $talk = $this->talk->find($id);
+
+            $events = Event::has('talks', '==', 0)
+                ->whereDate('start_date', '<=', $talk->start_date)
+                ->whereDate('end_date', '>=', $talk->start_date)
+                ->get();
+
+            return $events;
+
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function getEventsSigned($id)
+    {
+        try {
+            $talk = $this->talk->find($id);
+
+            $events = Event::has('talks', '>', 0)
+                ->whereDate('start_date', '<=', $talk->start_date)
+                ->whereDate('end_date', '>=', $talk->start_date)
+                ->get();
+
+            return $events;
+
         } catch (\Exception $e) {
             return $e->getMessage();
         }

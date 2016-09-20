@@ -27,22 +27,15 @@ class TalkController extends Controller
         return $service->getAllTalks();
     }
 
-    public function formSubscribe($id, SubscribeTalkService $service, ShowTalkService $serviceShow)
+    public function formSubscribe($id, ListTalkService $service, ShowTalkService $serviceShow)
     {
         $talk = $serviceShow->execute(null, $id);
 
         $events = $service->getEventsSubscribible($id);
 
-        $talk_event = $service->getTalksSigned($id);
+        $talk_event = $service->getEventsSigned($id);
 
         return view('admin.talks.subscribe-talk', compact('talk', 'events', 'talk_event'));
-    }
-
-    public function subscribeTalk(Request $request, $id, SubscribeTalkService $service)
-    {
-        $service->execute($request, $id);
-
-        return redirect()->back()->with('message', 'Charla subscrita correctamente');
     }
 
     public function list(ListTalkService $service)

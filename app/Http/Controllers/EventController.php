@@ -6,6 +6,8 @@ use EventApp\Application\Services\Event\CreateEventService;
 use EventApp\Application\Services\Event\DeleteEventService;
 use EventApp\Application\Services\Event\ListEventService;
 use EventApp\Application\Services\Event\ShowEventService;
+use EventApp\Application\Services\Event\SubscribeEventService;
+use EventApp\Application\Services\Event\UnsubscribeEventService;
 use EventApp\Application\Services\Event\UpdateEventService;
 use EventApp\Http\Requests\EventRequest;
 use Illuminate\Http\Request;
@@ -63,6 +65,20 @@ class EventController extends Controller
         $service->execute($request);
 
         return redirect()->back()->with('message', 'Evento añadido correctamente');
+    }
+
+    public function subscribeTalk(Request $request, $id, SubscribeEventService $service)
+    {
+        $service->execute($request, $id);
+
+        return redirect()->back()->with('message', 'Charla subscrita al evento correctamente');
+    }
+
+    public function unsubscribeTalk(Request $request, $id, UnsubscribeEventService $service)
+    {
+        $service->execute($request, $id);
+
+        return redirect()->back()->with('message', 'Charla eliminada del evento correctamente');
     }
 
     /**
