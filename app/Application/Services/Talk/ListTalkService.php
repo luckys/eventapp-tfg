@@ -10,6 +10,7 @@ namespace EventApp\Application\Services\Talk;
 
 
 use EventApp\Domain\Models\Event;
+use Illuminate\Support\Facades\DB;
 
 class ListTalkService extends TalkService
 {
@@ -62,7 +63,9 @@ class ListTalkService extends TalkService
         try {
             $talk = $this->talk->find($id);
 
-            $events = Event::has('talks', '==', 0)
+            $events = Event::with(['talks' => function ($query) use ($id) {
+                $query->where('event_talk.talk_id', '!=', $id);
+            }])
                 ->whereDate('start_date', '<=', $talk->start_date)
                 ->whereDate('end_date', '>=', $talk->start_date)
                 ->get();
@@ -79,7 +82,9 @@ class ListTalkService extends TalkService
         try {
             $talk = $this->talk->find($id);
 
-            $events = Event::has('talks', '>', 0)
+            $events = Event::whereHas('talks', function ($query) use ($id) {
+                $query->where('talk_id', $id);
+            })
                 ->whereDate('start_date', '<=', $talk->start_date)
                 ->whereDate('end_date', '>=', $talk->start_date)
                 ->get();

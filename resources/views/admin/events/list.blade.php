@@ -62,8 +62,6 @@
     {!! Form::open(['route' => ['admin.events.destroy', ':ID'], 'method' => 'DELETE', 'id' => 'myForm']) !!}
     {!! Form::close() !!}
 
-    @include('admin.events.list-events-subscribe')
-
 @endsection
 
 @section('scripts')

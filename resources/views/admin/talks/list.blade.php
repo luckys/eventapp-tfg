@@ -38,8 +38,8 @@
                             <td>{{ $talk->price }} €</td>
                             <td>
                                 <p>
-                                    <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/subscribe/') }}">
-                                        <i class="fa fa-book"></i>
+                                    <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/subscribe/') }}" alt="dagdgdg">
+                                        <i class="fa fa-thumbs-o-up"></i>
                                     </a>
                                     <a class="btn btn-default" href="{{ url('admin/talks/show/'.$talk->id) }}">
                                         <i class="fa fa-eye"></i>
@@ -68,5 +68,9 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ asset('js/ajax.js') }}"></script>
+    <script src="{{ asset('js/ajax.js') }}">
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 @endsection

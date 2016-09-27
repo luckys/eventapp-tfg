@@ -147,6 +147,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Recca0120\LaravelPayum\ServiceProvider::class,
 
     ],
 

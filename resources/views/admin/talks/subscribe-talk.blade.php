@@ -1,47 +1,77 @@
 @extends('admin.master')
 
-@section('styles')
-    <link rel="stylesheet" href="{{ asset('themes/admin/js/jquery-multi-select/css/multi-select.css') }}">
-@endsection
-
 @section('content')
     <section class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-5 col-md-offset-2">
-                    @include('admin.partials.message')
+                @include('admin.partials.message')
+                <div class="col-md-6">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Subscribir Charla a Eventos</div>
+                        <div class="panel-heading">Eventos para Subscribirse</div>
                         <div class="panel-body">
-                            @include('admin.errors.form_error')
+                            <table class="table table-hover general-table">
+                                <thead>
+                                <tr>
+                                    <th> Nombre</th>
+                                    <th>Fecha de Comienzo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                            {!! Form::model($talk, ['method' => 'PUT', 'route' => ['admin.talks.subscribe', $talk->id], 'id' => 'myForm']) !!}
+                                @foreach($events as $event)
 
-                                <div class="form-group col-md-offset-2">
+                                    {!! Form::open(['method' => 'POST', 'route' => ['admin.events.subscribe', $talk->id]]) !!}
+                                    {!! Form::hidden('event_id', $event->id) !!}
+                                    <tr>
+                                        <td>{{ $event->name }}</td>
+                                        <td>{{ $event->start_date }}</td>
+                                        <td>
+                                            <button class="btn btn-primary" type="submit">Susbcribir</button>
+                                        </td>
+                                    </tr>
+                                    {!! Form::close() !!}
+                                @endforeach
 
-                                    {!! Form::select('event_id[]', $events, isset($talk_event) ? $talk_event : null, [
-                                        'multiple' => true, 'id' => 'eventSelect']) !!}
-                                </div>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-                                <div class="form-group col-md-offset-4">
-                                    <button class="btn btn-primary" type="submit">
-                                        <i class="fa fa-check fa-fw" aria-hidden="true"></i>
-                                        Subscribir
-                                    </button>
-                                    <a href="{{ url('admin/talks') }}" class="btn btn-default">Cancelar</a>
-                                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Eventos Subscritos</div>
+                        <div class="panel-body">
+                            <table class="table table-hover general-table">
+                                <thead>
+                                <tr>
+                                    <th> Nombre</th>
+                                    <th>Fecha de Comienzo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                            {!! Form::close() !!}
+                                @foreach($talk_event as $event)
+
+                                    {!! Form::open(['method' => 'POST', 'route' => ['admin.events.unsubscribe', $talk->id]]) !!}
+                                    {!! Form::hidden('event_id', $event->id) !!}
+                                    <tr>
+                                        <td>{{ $event->name }}</td>
+                                        <td>{{ $event->start_date }}</td>
+                                        <td>
+                                            <button class="btn btn-primary" type="submit">Desvincular</button>
+                                        </td>
+                                    </tr>
+                                    {!! Form::close() !!}
+                                @endforeach
+
+                                </tbody>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-@endsection
-
-@section('scripts')
-    <script src="{{ asset('js/ajax.js') }}"></script>
-    <script src="{{ asset('themes/admin/js/jquery-multi-select/js/jquery.multi-select.js') }}"></script>
-    <script>$('#eventSelect').multiSelect();</script>
 @endsection
