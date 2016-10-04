@@ -5,6 +5,7 @@ namespace EventApp\Http\Controllers;
 use EventApp\Application\Services\Event\CreateEventService;
 use EventApp\Application\Services\Event\DeleteEventService;
 use EventApp\Application\Services\Event\ListEventService;
+use EventApp\Application\Services\Event\PaymentEventService;
 use EventApp\Application\Services\Event\ShowEventService;
 use EventApp\Application\Services\Event\SubscribeEventService;
 use EventApp\Application\Services\Event\UnsubscribeEventService;
@@ -152,5 +153,12 @@ class EventController extends Controller
         $message = "El evento ha sido eliminado correctamente";
 
         return response()->json(['message' => $message]);
+    }
+
+    public function buyEvent($id, PaymentEventService $service)
+    {
+        $service->execute(null, $id);
+
+        return response('Compra hecha');
     }
 }

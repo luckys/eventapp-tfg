@@ -11,7 +11,8 @@
         "ramsey/uuid": "^3.5",
         "intervention/image": "^2.3",
         "barryvdh/laravel-debugbar": "^2.2",
-        "recca0120/laravel-payum": "^1.0"
+        "ignited/laravel-omnipay": "^2.2",
+        "omnipay/paypal": "^2.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

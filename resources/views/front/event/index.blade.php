@@ -38,7 +38,7 @@
                 <div class="hotel-content">
                     <div class="hotel-grid" style="background-image: url(uploads/events/@{{ event.image }});">
                         <div class="price"><small>Precio</small><span>@{{ event.price }} €</span></div>
-                        <a class="book-now text-center" href=""> Comprar</a>
+                        <a class="book-now text-center" href="{{ url('events/') }}/@{{ event.id }}/buy"> Comprar</a>
                     </div>
                     <div class="desc fix-text-event">
                         <h3><a href="{{ url('events/show') }}/@{{ event.id }}"><strong>@{{ event.name }}</strong></a></h3>
