@@ -8,7 +8,6 @@
 
 namespace EventApp\Application\Services\Event;
 
-use Illuminate\Support\Facades\Session;
 use Omnipay\Omnipay;
 
 class PaymentEventService extends EventService
@@ -26,9 +25,8 @@ class PaymentEventService extends EventService
             'amount'    => $product->price,
             'currency'  => 'EUR'
         ];
-
-        Session::put('sell', $order);
-        Session::save();
+        
+        //session('sell', $order);
 
         $gateway = Omnipay::create('PayPal_Express');
         $gateway->setUsername(config('services.paypal.username'));
