@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1feee202-07cf-48bc-bfdc-b89ad362ec55" name="Default" comment="Doing payment event">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/PaymentRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/front/event/form-buy.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Application/Services/Event/PaymentEventService.php" afterPath="$PROJECT_DIR$/app/Application/Services/Event/PaymentEventService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/EventRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/EventRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/event/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/event/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/event/modal-payment.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/event/modal-payment.blade.php" />
     </list>
     <ignored path="eventapp-tfg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -325,7 +316,7 @@
       <workItem from="1474986503057" duration="4075000" />
       <workItem from="1475055105719" duration="15000" />
       <workItem from="1475578068712" duration="4960000" />
-      <workItem from="1475594817478" duration="3606000" />
+      <workItem from="1475594817478" duration="4881000" />
     </task>
     <task id="LOCAL-00001" summary="Configuring Code Climate">
       <created>1471116275644</created>
@@ -537,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475595027405</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Doing payment event">
+      <created>1475598428791</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1475598428791</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377792000" />
+    <option name="totallyTimeSpent" value="379067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1046" extended-state="6" />
