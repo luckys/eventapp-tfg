@@ -2,7 +2,7 @@
 
 namespace EventApp\Http\Requests;
 
-class EventRequest extends Request
+class PaymentRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,14 +22,8 @@ class EventRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required|string',
-            'description' => 'required|string',
-            'start_date' => 'required',
-            'end_date' => 'required',
-            'address' => 'required|string',
-            'capacity' => 'required|numeric',
-            'price' => 'required|numeric',
-            'image' => 'image',
+            'fullname' => 'required',
+            'email' => 'required|email'
         ];
     }
 }

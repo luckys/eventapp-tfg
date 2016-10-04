@@ -11,6 +11,7 @@ use EventApp\Application\Services\Event\SubscribeEventService;
 use EventApp\Application\Services\Event\UnsubscribeEventService;
 use EventApp\Application\Services\Event\UpdateEventService;
 use EventApp\Http\Requests\EventRequest;
+use EventApp\Http\Requests\PaymentRequest;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -153,6 +154,18 @@ class EventController extends Controller
         $message = "El evento ha sido eliminado correctamente";
 
         return response()->json(['message' => $message]);
+    }
+
+    public function formBuy($id)
+    {
+        return view('front.event.form-buy', compact('id'));
+    }
+
+    public function paymentEvent(PaymentRequest $request, PaymentEventService $service)
+    {
+        $service->execute(null, $request->id);
+
+        return response('Compra hecha');
     }
 
     public function buyEvent($id, PaymentEventService $service)

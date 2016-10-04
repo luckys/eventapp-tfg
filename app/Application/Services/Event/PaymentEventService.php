@@ -17,7 +17,19 @@ class PaymentEventService extends EventService
     {
         $product = $this->event->find($id);
 
+        $response = $this->payment($product);
+
+        if ($response->isRedirect()) {
+            $response->redirect();
+        } else {
+            throw new \Exception($response->getMessage());
+        }
+    }
+
+    public function payment($product)
+    {
         $order = [
+            'event_id' => $product->id,
             'cancelUrl'     => 'http://localhost/events/cancel_order',
             'returnUrl'     => 'http://localhost/events/payment_success',
             'name'      => $product->name,
@@ -25,8 +37,8 @@ class PaymentEventService extends EventService
             'amount'    => $product->price,
             'currency'  => 'EUR'
         ];
-        
-        //session('sell', $order);
+
+        session('sell', $order);
 
         $gateway = Omnipay::create('PayPal_Express');
         $gateway->setUsername(config('services.paypal.username'));
@@ -35,12 +47,6 @@ class PaymentEventService extends EventService
 
         $gateway->setTestMode(true);
 
-        $response = $gateway->purchase($order)->send();
-
-        if ($response->isRedirect()) {
-            $response->redirect();
-        } else {
-            throw new \Exception($response->getMessage());
-        }
+        return $gateway->purchase($order)->send();
     }
 }

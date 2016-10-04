@@ -14,7 +14,11 @@
 
         @include('front.partials.header')
 
-        @include('front.partials.aside')
+
+        @unless(\Request::is('events/*/form'))
+            @include('front.partials.aside')
+        @endunless
+
 
         @if(\Request::is('/'))
             @include('front.partials.navbar_counter')

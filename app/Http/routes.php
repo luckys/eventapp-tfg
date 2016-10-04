@@ -50,7 +50,9 @@ Route::group(['prefix' => 'api'], function () {
 
 Route::get('events', 'EventController@allEvents');
 Route::get('events/show/{id}', 'EventController@show');
+Route::get('events/{id}/form', 'EventController@formBuy');
 Route::get('events/{id}/buy', 'EventController@buyEvent');
+Route::post('events/payment', 'EventController@paymentEvent');
 Route::get('talks', 'TalkController@allTalks');
 Route::get('talks/show/{id}', 'TalkController@show');
 
