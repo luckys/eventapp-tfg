@@ -16,10 +16,22 @@ class PaymentEventService extends EventService
     public function execute($request = null, $id = null)
     {
         $product = $this->event->find($id);
+        $response = null;
 
-        $response = $this->payment($product);
+        if($product->total_tickets == 0.00)
+            abort(404);
+
+        if($product->price > 0.00) {
+            $response = $this->payment($product);
+        }else {
+
+            session(['name' => $request->fullname, 'email' => $request->email]);
+            $product->update(['total_tickets' => $product->total_tickets - 1]);
+            return true;
+        }
 
         if ($response->isRedirect()) {
+            $product->update(['total_tickets' => $product->total_tickets - 1]);
             $response->redirect();
         } else {
             throw new \Exception($response->getMessage());

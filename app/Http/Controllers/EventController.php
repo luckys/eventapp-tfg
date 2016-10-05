@@ -4,6 +4,7 @@ namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Event\CreateEventService;
 use EventApp\Application\Services\Event\DeleteEventService;
+use EventApp\Application\Services\Event\GeneratePdfEventService;
 use EventApp\Application\Services\Event\ListEventService;
 use EventApp\Application\Services\Event\PaymentEventService;
 use EventApp\Application\Services\Event\ShowEventService;
@@ -163,15 +164,29 @@ class EventController extends Controller
 
     public function paymentEvent(PaymentRequest $request, PaymentEventService $service)
     {
-        $service->execute(null, $request->id);
+        $flag = $service->execute($request, $request->id);
+
+        if($flag)
+            return redirect('events/ticket/'.$request->id.'/purchased');
 
         return response('Compra hecha');
     }
 
     public function buyEvent($id, PaymentEventService $service)
     {
-        $service->execute(null, $id);
+        $flag = $service->execute(null, $id);
+
+        if($flag)
+            return redirect('events/ticket/'.$id.'/purchased');
 
         return response('Compra hecha');
+    }
+
+    public function getTicket($id, GeneratePdfEventService $service)
+    {
+        $pdf = $service->execute(null, $id);
+
+        return $pdf->download(str_random(10).'.pdf');
+
     }
 }

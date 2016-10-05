@@ -53,6 +53,7 @@ Route::get('events/show/{id}', 'EventController@show');
 Route::get('events/{id}/form', 'EventController@formBuy');
 Route::get('events/{id}/buy', 'EventController@buyEvent');
 Route::post('events/payment', 'EventController@paymentEvent');
+Route::get('events/ticket/{id}/purchased', 'EventController@getTicket');
 Route::get('talks', 'TalkController@allTalks');
 Route::get('talks/show/{id}', 'TalkController@show');
 

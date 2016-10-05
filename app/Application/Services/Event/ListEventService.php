@@ -32,7 +32,7 @@ class ListEventService extends EventService
     public function getAllEvents()
     {
         try {
-            return $this->event->orderBy('created_at', 'desc')->all();
+            return $this->event->orderBy('created_at', 'desc')->findWhere([['total_tickets', '>', 0]]);
         } catch (\Exception $e) {
             return $e->getMessage();
         }
