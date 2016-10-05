@@ -319,7 +319,7 @@
       <workItem from="1475594817478" duration="4881000" />
       <workItem from="1475615441782" duration="10518000" />
       <workItem from="1475626480545" duration="17000" />
-      <workItem from="1475662576801" duration="4171000" />
+      <workItem from="1475662576801" duration="4185000" />
     </task>
     <task id="LOCAL-00001" summary="Configuring Code Climate">
       <created>1471116275644</created>
@@ -545,11 +545,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475667781182</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Doing payment talk">
+      <created>1475667793161</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1475667793161</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393773000" />
+    <option name="totallyTimeSpent" value="393787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1046" extended-state="6" />
