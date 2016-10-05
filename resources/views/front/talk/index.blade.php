@@ -37,7 +37,11 @@
                 <div class="hotel-content">
                     <div class="hotel-grid" style="background-image: url(uploads/talks/@{{ talk.image }});">
                         <div class="price"><small>Precio</small><span>@{{ talk.price }} €</span></div>
-                        <a class="book-now text-center" href=""> Comprar</a>
+                        @if(auth()->user())
+                            <a class="book-now text-center" href="{{ url('talks/') }}/@{{ talk.id }}/buy"> Comprar</a>
+                        @else
+                            <a class="book-now text-center" href="{{ url('talks/') }}/@{{ talk.id }}/form"> Comprar</a>
+                        @endif
                     </div>
                     <div class="desc fix-text-talk">
                         <h3><a href="{{ url('talks/show') }}/@{{ talk.id }}"><strong>@{{ talk.title }}</strong></a></h3>

@@ -186,7 +186,7 @@ class EventController extends Controller
     {
         $pdf = $service->execute(null, $id);
 
-        return $pdf->download(str_random(10).'.pdf');
+        return $pdf->stream(str_random(10).'.pdf');
 
     }
 }

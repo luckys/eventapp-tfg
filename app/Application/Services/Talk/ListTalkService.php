@@ -39,7 +39,7 @@ class ListTalkService extends TalkService
             $datas =  $this->talk
                            ->orderBy('created_at', 'desc')
                            ->with(['speaker'])
-                           ->all();
+                           ->findWhere([['total_tickets', '>', 0]]);
             foreach ($datas as $talk) {
                 $result = [
                     'id' => $talk->id,

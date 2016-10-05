@@ -2,6 +2,7 @@
 
 namespace EventApp\Domain\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Ramsey\Uuid\Uuid;
 
