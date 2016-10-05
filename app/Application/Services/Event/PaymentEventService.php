@@ -25,7 +25,11 @@ class PaymentEventService extends EventService
             $response = $this->payment($product);
         }else {
 
-            session(['name' => $request->fullname, 'email' => $request->email]);
+            if(auth()->user()){
+                session(['name' => auth()->user()->fullname, 'email' => auth()->user()->email]);
+            }else{
+                session(['name' => $request->fullname, 'email' => $request->email]);
+            }
             $product->update(['total_tickets' => $product->total_tickets - 1]);
             return true;
         }
