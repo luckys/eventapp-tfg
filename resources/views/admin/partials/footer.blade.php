@@ -1,3 +1,3 @@
 <footer class="sticky-footer">
-    2015 &copy; LaravelStart by Luckys
+    2016 &copy; EventApp - TFG
 </footer>

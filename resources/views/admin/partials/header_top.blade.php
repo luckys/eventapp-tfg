@@ -15,8 +15,8 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                    <li><a href="{{ url('auth/user/profile') }}"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
-                    <li><a href="{{ url('auth/user/change-password') }}"><i class="fa fa-key"></i> <span>Cambiar Contraseña</span></a></li>
+                    <li><a href="{{ url('admin/auth/user/profile') }}"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
+                    <li><a href="{{ url('admin/auth/user/change-password') }}"><i class="fa fa-key"></i> <span>Cambiar Contraseña</span></a></li>
                     <li><a href="{{ url('auth/logout') }}"><i class="fa fa-sign-out"></i> Salir</a></li>
                 </ul>
             </li>
