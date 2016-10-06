@@ -8,14 +8,11 @@ use EventApp\Application\Services\Talk\GeneratePdfTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
 use EventApp\Application\Services\Talk\PaymentTalkService;
 use EventApp\Application\Services\Talk\ShowTalkService;
-use EventApp\Application\Services\Talk\SubscribeTalkService;
 use EventApp\Application\Services\Talk\UpdateTalkService;
+use EventApp\Events\TalkWasPurchased;
 use EventApp\Http\Requests\PaymentRequest;
 use EventApp\Http\Requests\TalkRequest;
-use Illuminate\Http\Request;
 
-use EventApp\Http\Requests;
-use EventApp\Http\Controllers\Controller;
 
 class TalkController extends Controller
 {
@@ -165,7 +162,22 @@ class TalkController extends Controller
     {
         $pdf = $service->execute(null, $id);
 
-        return $pdf->stream(str_random(10).'.pdf');
+        $nameFile = str_random(10).'.pdf';
+
+        $patchURL = 'uploads/talks/tickets/'.$nameFile;
+
+        $patchFile = public_path($patchURL);
+
+
+        $user = [
+            'email' => session('email'),
+            'name' => session('name'),
+            'url' => $patchURL
+        ];
+
+        event(new TalkWasPurchased($user));
+
+        return $pdf->save($patchFile)->stream();
 
     }
 }

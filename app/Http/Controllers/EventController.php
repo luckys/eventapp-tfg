@@ -11,9 +11,11 @@ use EventApp\Application\Services\Event\ShowEventService;
 use EventApp\Application\Services\Event\SubscribeEventService;
 use EventApp\Application\Services\Event\UnsubscribeEventService;
 use EventApp\Application\Services\Event\UpdateEventService;
+use EventApp\Events\EventWasPurchased;
 use EventApp\Http\Requests\EventRequest;
 use EventApp\Http\Requests\PaymentRequest;
 use Illuminate\Http\Request;
+
 
 class EventController extends Controller
 {
@@ -186,7 +188,21 @@ class EventController extends Controller
     {
         $pdf = $service->execute(null, $id);
 
-        return $pdf->stream(str_random(10).'.pdf');
+        $nameFile = str_random(10).'.pdf';
 
+        $patchURL = 'uploads/events/tickets/'.$nameFile;
+
+        $patchFile = public_path($patchURL);
+
+
+        $user = [
+            'email' => session('email'),
+            'name' => session('name'),
+            'url' => $patchURL
+        ];
+
+        event(new EventWasPurchased($user));
+
+        return $pdf->save($patchFile)->stream();
     }
 }
