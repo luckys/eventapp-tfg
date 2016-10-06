@@ -3,6 +3,8 @@
 namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\User\SignUpService;
+use EventApp\Application\Services\User\UpdateProfileService;
+use EventApp\Http\Requests\ProfileRequest;
 use Illuminate\Http\Request;
 
 
@@ -49,24 +51,25 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        return view('admin.users.edit');
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param ProfileRequest $request
+     * @param UpdateProfileService $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProfileRequest $request, UpdateProfileService $service)
     {
-        //
+        $service->execute($request, null);
+
+        return redirect()->back()->with('message', 'Perfil actualizado correctamente');
     }
 
     /**

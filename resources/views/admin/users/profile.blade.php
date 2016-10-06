@@ -39,7 +39,7 @@
                                     </li>
                                 </ul>
                                 <br>
-                                <a class="btn btn-primary pull-right" href="#" role="button">Actualizar Perfil</a>
+                                <a class="btn btn-primary pull-right" href="{{ url('admin/auth/user/profile/edit') }}" role="button">Actualizar Perfil</a>
                             </div>
                         </div>
                     </div>
