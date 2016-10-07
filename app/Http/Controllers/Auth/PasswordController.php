@@ -53,7 +53,7 @@ class PasswordController extends Controller
      */
     public function postEmail(Request $request)
     {
-        $this->validate($request, ['email' => 'required|email']);
+        $this->validate($request, ['email' => 'required|email|exists:users,email']);
         $data = [
             'email' => $request->email,
             'token' => str_random(40)
