@@ -26,6 +26,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('auth/user/profile', 'UserController@show');
     Route::get('auth/user/profile/edit', 'UserController@edit');
     Route::put('auth/user/profile', 'UserController@update');
+    Route::get('auth/user/change-password', 'UserController@getChangePassword');
+    Route::patch('auth/user/change-password', 'UserController@updatePassword');
 
     Route::get('events/create', 'EventController@create');
     Route::get('events', 'EventController@list');

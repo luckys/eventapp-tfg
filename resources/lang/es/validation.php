@@ -75,6 +75,7 @@ return [
     'timezone'             => 'El campo :attribute debe contener una zona válida.',
     'unique'               => 'El elemento :attribute ya está en uso.',
     'url'                  => 'El formato de :attribute no corresponde con el de una URL válida.',
+    'actual_password'      => 'El campo contraseña actual no coincide con la contraseña que tiene actualmente.',
 
     /*
     |--------------------------------------------------------------------------

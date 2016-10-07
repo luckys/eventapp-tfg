@@ -3,8 +3,10 @@
 namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\User\SignUpService;
+use EventApp\Application\Services\User\UpdatePasswordService;
 use EventApp\Application\Services\User\UpdateProfileService;
 use EventApp\Http\Requests\ProfileRequest;
+use EventApp\Http\Requests\UpdatePasswordRequest;
 use Illuminate\Http\Request;
 
 
@@ -70,6 +72,18 @@ class UserController extends Controller
         $service->execute($request, null);
 
         return redirect('admin/auth/user/profile')->with('message', 'Perfil actualizado correctamente');
+    }
+
+    public function getChangePassword()
+    {
+        return view('admin.users.edit-password');
+    }
+
+    public function updatePassword(UpdatePasswordRequest $request, UpdatePasswordService $service)
+    {
+        $service->execute($request, null);
+
+        return redirect('admin/auth/user/profile')->with('message', 'Contraseña actualizada correctamente');
     }
 
     /**
