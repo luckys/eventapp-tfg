@@ -69,7 +69,7 @@ class UserController extends Controller
     {
         $service->execute($request, null);
 
-        return redirect()->back()->with('message', 'Perfil actualizado correctamente');
+        return redirect('admin/auth/user/profile')->with('message', 'Perfil actualizado correctamente');
     }
 
     /**
