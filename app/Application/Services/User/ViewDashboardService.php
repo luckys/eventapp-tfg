@@ -23,7 +23,7 @@ class ViewDashboardService extends UserService
     public function execute($request = null, $id = null)
     {
         $talks = DB::table('talks')
-                    ->select('talks.id', 'talks.title', 'event_talk.status', 'event_talk.initial_date', 'events.name', 'events.start_date', 'users.firstname', 'users.lastname')
+                    ->select('talks.id', 'talks.title', 'event_talk.status', 'event_talk.initial_date', 'events.id as event_id', 'events.name', 'events.start_date', 'users.firstname', 'users.lastname')
                     ->join('event_talk', 'talks.id', '=', 'event_talk.talk_id')
                     ->join('events', 'events.id', '=', 'event_talk.event_id')
                     ->join('users', 'users.id', '=', 'talks.speaker_id')

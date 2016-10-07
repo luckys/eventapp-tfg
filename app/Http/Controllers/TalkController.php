@@ -8,10 +8,12 @@ use EventApp\Application\Services\Talk\GeneratePdfTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
 use EventApp\Application\Services\Talk\PaymentTalkService;
 use EventApp\Application\Services\Talk\ShowTalkService;
+use EventApp\Application\Services\Talk\StateTalkService;
 use EventApp\Application\Services\Talk\UpdateTalkService;
 use EventApp\Events\TalkWasPurchased;
 use EventApp\Http\Requests\PaymentRequest;
 use EventApp\Http\Requests\TalkRequest;
+use Illuminate\Http\Request;
 
 
 class TalkController extends Controller
@@ -179,5 +181,12 @@ class TalkController extends Controller
 
         return $pdf->save($patchFile)->stream();
 
+    }
+
+    public function changeState(Request $request, StateTalkService $service)
+    {
+        $service->execute($request, null);
+
+        return redirect()->back()->with('message', 'Estado actualizado correctamente');
     }
 }

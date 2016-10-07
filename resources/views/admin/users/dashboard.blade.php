@@ -37,8 +37,11 @@
                                 <td>{{ $talk->firstname.' '.$talk->lastname }}</td>
                                 <td>
                                     <p>
-                                        <a class="btn btn-default" href="{{ url('talks/change/state/'.$talk->id) }}">
-                                            <i class="fa fa-cogs"></i>
+                                        <a class="btn btn-default" href="{{ url('admin/events/'.$talk->event_id.'/talks/change/state/'.$talk->id) }}">
+                                            <i class="fa fa-random"></i>
+                                        </a>
+                                        <a class="btn btn-default" href="{{ url('admin/events/'.$talk->event_id.'/talks/delete/state/'.$talk->id) }}">
+                                            <i class="fa fa-remove"></i>
                                         </a>
                                     </p>
                                 </td>

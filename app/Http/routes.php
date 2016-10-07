@@ -50,6 +50,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::post('talks/{id}/subscribe/events', ['as' => 'admin.events.subscribe', 'uses' => 'EventController@subscribeTalk']);
     Route::post('talks/{id}/unsubscribe/events', ['as' => 'admin.events.unsubscribe', 'uses' => 'EventController@unsubscribeTalk']);
     Route::delete('talks/{id}', ['as' => 'admin.talks.destroy', 'uses' => 'TalkController@destroy']);
+    Route::get('events/{event_id}/talks/change/state/{talk_id}', 'TalkController@changeState');
+    Route::get('events/{event_id}/talks/delete/state/{talk_id}', 'TalkController@deleteState');
 });
 
 Route::group(['prefix' => 'api'], function () {
