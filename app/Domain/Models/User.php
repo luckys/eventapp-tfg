@@ -37,6 +37,7 @@ class User extends Model implements AuthenticatableContract,
         'lastname',
         'company',
         'biography',
+        'job',
         'url_github',
         'url_twitter',
         'photo'

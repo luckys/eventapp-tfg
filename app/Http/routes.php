@@ -25,9 +25,7 @@ Route::post('auth/password/reset', 'Auth\PasswordController@postReset');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-    Route::get('/dashboard', function () {
-        return view('admin.master');
-    });
+    Route::get('/dashboard', 'UserController@index');
 
     Route::get('auth/user/profile', 'UserController@show');
     Route::get('auth/user/profile/edit', 'UserController@edit');

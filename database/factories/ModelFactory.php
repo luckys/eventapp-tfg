@@ -16,33 +16,39 @@ use EventApp\Domain\Models\User;
 $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $faker) {
 
     return [
-        'email' => 'speaker@demo.com',
-        'password' => bcrypt('speaker'),
+        'email' => $faker->companyEmail,
+        'password' => 'speaker',
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
+        'company' => $faker->company,
+        'job' => $faker->jobTitle,
+        'biography' => $faker->paragraph,
+        'url_github' => 'https://github.com/user1',
+        'url_twitter' => 'https://twitter.com/user1',
+        'photo' => 'default.jpg',
     ];
 });
 
 $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator $faker) {
 
     return [
-        'author_id' => User::first()->id,
+        'author_id' => User::all()->random()->id,
         'name' => $faker->sentence,
         'description' => $faker->sentence,
         'start_date' => $faker->dateTimeThisMonth,
         'end_date' => $faker->dateTimeThisMonth,
         'address' => $faker->address,
-        'capacity' => 200,
-        'total_tickets' => 200,
+        'capacity' => 50,
+        'total_tickets' => 50,
         'price' => $faker->randomFloat(2, 0, 500),
-        'image' => 'egege.jpg',
+        'image' => 'events.jpg',
     ];
 });
 
 $factory->define(EventApp\Domain\Models\Talk::class, function (Faker\Generator $faker) {
 
     return [
-        'speaker_id' => User::first()->id,
+        'speaker_id' => User::all()->random()->id,
         'title' => $faker->sentence,
         'description' => $faker->sentence,
         'type' => 'Seminario',
@@ -53,6 +59,6 @@ $factory->define(EventApp\Domain\Models\Talk::class, function (Faker\Generator $
         'capacity' => 1,
         'total_tickets' => 1,
         'price' => $faker->randomFloat(2, 0, 500),
-        'image' => 'feqgegeg.jpg',
+        'image' => 'talk1.jpg',
     ];
 });

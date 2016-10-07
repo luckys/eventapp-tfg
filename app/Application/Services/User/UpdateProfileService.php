@@ -29,6 +29,7 @@ class UpdateProfileService extends UserService
                 'firstname' => $request->firstname,
                 'lastname' => $request->lastname,
                 'company' => $request->company,
+                'job' => $request->job,
                 'biography' => $request->biography,
                 'url_github' => $request->url_github,
                 'url_twitter' => $request->url_twitter,

@@ -44,6 +44,7 @@ class CreateTalksTable extends Migration
             $table->foreign('talk_id')
                   ->references('id')->on('talks');
             $table->dateTime('initial_date');
+            $table->enum('status', ['Pendiente', 'Aprobado']);
             $table->timestamps();
 
         });

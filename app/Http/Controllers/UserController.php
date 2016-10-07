@@ -5,6 +5,7 @@ namespace EventApp\Http\Controllers;
 use EventApp\Application\Services\User\SignUpService;
 use EventApp\Application\Services\User\UpdatePasswordService;
 use EventApp\Application\Services\User\UpdateProfileService;
+use EventApp\Application\Services\User\ViewDashboardService;
 use EventApp\Http\Requests\ProfileRequest;
 use EventApp\Http\Requests\UpdatePasswordRequest;
 use Illuminate\Http\Request;
@@ -18,11 +19,14 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param ViewDashboardService $service
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ViewDashboardService $service)
     {
-        //
+        $talks = $service->execute();
+
+        return view('admin.users.dashboard', compact('talks'));
     }
 
 

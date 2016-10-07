@@ -53,7 +53,7 @@
                             <div class="panel-body">
                                 <div class="profile-desk">
                                     <h1>{{ auth()->user()->fullname }}</h1>
-                                    <span class="designation">{{ auth()->user()->company }}</span>
+                                    <span class="designation">{{ auth()->user()->job }}</span>
                                     <p>{{ auth()->user()->biography }}</p>
                                     <a class="btn p-follow-btn pull-left" href="#"> <i class="fa fa-check"></i> Following</a>
 

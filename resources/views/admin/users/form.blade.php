@@ -35,6 +35,15 @@
 </div>
 
 <div class="form-group">
+    <label  class="col-lg-2 col-sm-2 control-label">Puesto de Trabajo</label>
+    <div class="col-lg-8">
+
+        {!! Form::text('job', null, ['class' => 'form-control']) !!}
+
+    </div>
+</div>
+
+<div class="form-group">
     <label  class="col-lg-2 col-sm-2 control-label">Biografía</label>
     <div class="col-lg-8">
 
