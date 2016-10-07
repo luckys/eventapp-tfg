@@ -15,7 +15,9 @@
         @include('front.partials.header')
 
 
-        @unless((\Request::is('events/*/form')) || (\Request::is('talks/*/form')))
+        @unless((\Request::is('events/*/form')) ||
+        (\Request::is('talks/*/form')) ||
+         (\Request::is('auth/password/*')))
             @include('front.partials.aside')
         @endunless
 

@@ -17,6 +17,12 @@ Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::post('auth/signup', 'UserController@signUp');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
+// Password reset link request routes...
+Route::get('auth/password/email', 'Auth\PasswordController@getEmail');
+Route::post('auth/password/email', 'Auth\PasswordController@postEmail');
+Route::get('auth/password/reset/{token}', 'Auth\PasswordController@getChangePassword');
+Route::post('auth/password/reset', 'Auth\PasswordController@postReset');
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::get('/dashboard', function () {
