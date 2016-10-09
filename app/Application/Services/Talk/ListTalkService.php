@@ -9,6 +9,7 @@
 namespace EventApp\Application\Services\Talk;
 
 
+use Carbon\Carbon;
 use EventApp\Domain\Models\Event;
 use Illuminate\Support\Facades\DB;
 
@@ -63,12 +64,11 @@ class ListTalkService extends TalkService
         try {
             $talk = $this->talk->find($id);
 
-            $events = Event::with(['talks' => function ($query) use ($id) {
-                $query->where('event_talk.talk_id', '!=', $id);
-            }])
-                ->whereDate('start_date', '<=', $talk->start_date)
-                ->whereDate('end_date', '>=', $talk->start_date)
-                ->get();
+            $events = DB::table('events')
+                        ->where('start_date', '>=', Carbon::now())
+                        ->leftJoin('event_talk', 'events.id', '=', 'event_talk.event_id')
+                        //->where('event_talk.talk_id', '!=', $talk->id)
+                        ->get();
 
             return $events;
 
@@ -85,8 +85,8 @@ class ListTalkService extends TalkService
             $events = Event::whereHas('talks', function ($query) use ($id) {
                 $query->where('talk_id', $id);
             })
-                ->whereDate('start_date', '<=', $talk->start_date)
-                ->whereDate('end_date', '>=', $talk->start_date)
+                ->whereDate('start_date', '>=', Carbon::now())
+                //->whereDate('end_date', '>=', $talk->start_date)
                 ->get();
 
             return $events;
