@@ -8,7 +8,7 @@
             <br>
             <section class="panel panel-default">
                 <header class="panel-heading">
-                    Charlas subscritas
+                    Tablero de charlas aprobadas y pendientes de subscripción a eventos
                 </header>
 
                 <div class="panel-body">
@@ -29,7 +29,7 @@
                         @foreach($talks as $talk)
 
                             <tr>
-                                <td>{{ $talk->title }}</td>
+                                <td><a href="{{ url('talks/show/'.$talk->id) }}" target="_blank">{{ $talk->title }}</a></td>
                                 <td>{{ $talk->initial_date }}</td>
                                 <td>{!! $talk->status !!}</td>
                                 <td>{{ $talk->name }}</td>

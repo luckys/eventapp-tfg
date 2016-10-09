@@ -44,7 +44,7 @@ class CreateTalksTable extends Migration
             $table->foreign('talk_id')
                   ->references('id')->on('talks');
             $table->dateTime('initial_date');
-            $table->enum('status', ['Pendiente', 'Aprobado']);
+            $table->enum('status', ['Pendiente', 'Aprobado'])->default('Pendiente');
             $table->timestamps();
 
         });
@@ -58,5 +58,6 @@ class CreateTalksTable extends Migration
     public function down()
     {
         Schema::drop('talks');
+        Schema::drop('event_talk');
     }
 }

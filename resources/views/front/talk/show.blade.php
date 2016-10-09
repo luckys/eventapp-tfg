@@ -45,7 +45,11 @@
                                 <span>Precio:</span>
                                 <strong>
                                     {{ $talk->price }} €
-                                    <a class="btn btn-primary" href="#" role="button">Comprar</a>
+                                    @if(auth()->user())
+                                        <a class="btn btn-primary" role="button" href="{{ url('talks/'.$talk->id.'/buy') }}"> Comprar</a>
+                                    @else
+                                        <a class="btn btn-primary" role="button" href="{{ url('talks/'.$talk->id.'/form') }}"> Comprar</a>
+                                    @endif
                                 </strong>
                             </p>
                         </div>
