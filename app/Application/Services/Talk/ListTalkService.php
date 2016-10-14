@@ -62,12 +62,12 @@ class ListTalkService extends TalkService
     public function getEventsSubscribible($id)
     {
         try {
-            $talk = $this->talk->find($id);
+            //$talk = $this->talk->find($id);
 
             $events = DB::table('events')
                         ->where('start_date', '>=', Carbon::now())
-                        ->join('event_talk', 'events.id', '=', 'event_talk.event_id')
-                        //->where('event_talk.talk_id', '!=', $talk->id)
+                        ->leftJoin('event_talk', 'events.id', '=', 'event_talk.event_id')
+                        ->whereNull('event_talk.talk_id') // , '=', $id)
                         ->get();
 
             return $events;
