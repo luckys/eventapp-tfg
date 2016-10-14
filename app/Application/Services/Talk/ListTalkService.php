@@ -66,7 +66,7 @@ class ListTalkService extends TalkService
 
             $events = DB::table('events')
                         ->where('start_date', '>=', Carbon::now())
-                        ->leftJoin('event_talk', 'events.id', '=', 'event_talk.event_id')
+                        ->join('event_talk', 'events.id', '=', 'event_talk.event_id')
                         //->where('event_talk.talk_id', '!=', $talk->id)
                         ->get();
 
