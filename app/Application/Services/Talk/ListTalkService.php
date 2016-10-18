@@ -80,7 +80,7 @@ class ListTalkService extends TalkService
     public function getEventsSigned($id)
     {
         try {
-            $talk = $this->talk->find($id);
+            //$talk = $this->talk->find($id);
 
             $events = Event::whereHas('talks', function ($query) use ($id) {
                 $query->where('talk_id', $id);
