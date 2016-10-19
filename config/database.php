@@ -45,11 +45,10 @@ return [
     */
 
     'connections' => [
-
         'sqlite' => [
-            'driver'   => 'sqlite',
-            'database' => database_path('database.sqlite'),
-            'prefix'   => '',
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
         ],
 
         'mysql' => [

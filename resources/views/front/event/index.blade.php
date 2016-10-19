@@ -2,6 +2,18 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('themes/admin/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}">
+    <style>
+        .staggered-transition {
+            transition: all .5s ease;
+            overflow: hidden;
+            margin: 0;
+            height: 20px;
+        }
+        .staggered-enter, .staggered-leave {
+            opacity: 0;
+            height: 0;
+        }
+    </style>
 @endsection
 
 @section('content')
