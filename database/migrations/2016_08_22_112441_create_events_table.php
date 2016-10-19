@@ -39,6 +39,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('event');
+        Schema::drop('events');
     }
 }
