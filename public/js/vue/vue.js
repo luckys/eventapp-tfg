@@ -1735,9 +1735,9 @@ var transition = Object.freeze({
   });
 
   /**
-   * Events & Watchers.
+   * Event & Watchers.
    *
-   * Events & watchers hashes should not overwrite one
+   * Event & watchers hashes should not overwrite one
    * another, so we merge them as arrays.
    */
 
