@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1feee202-07cf-48bc-bfdc-b89ad362ec55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/events/tickets/17n9FEFI5b.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/events/tickets/r7TxLDHUVd.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vue/components/event-card.js" afterPath="$PROJECT_DIR$/public/js/vue/components/event-card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/vue/components/talk-card.js" afterPath="$PROJECT_DIR$/public/js/vue/components/talk-card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/luxe/css/all.css" afterPath="$PROJECT_DIR$/public/themes/luxe/css/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/event/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/event/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" />
     </list>
     <ignored path="eventapp-tfg.iws" />
@@ -35,8 +27,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/event/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="89" />
+            <state relative-caret-position="277">
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding>
                 <element signature="e#1549#1614#0#HTML" expanded="true" />
               </folding>
@@ -47,28 +39,18 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/front/talk/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="56" column="89" selection-start-line="56" selection-start-column="89" selection-end-line="56" selection-end-column="89" />
+            <state relative-caret-position="384">
+              <caret line="55" column="80" selection-start-line="55" selection-start-column="80" selection-end-line="55" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event-card.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="event-card.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/vue/components/event-card.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
-              <caret line="33" column="76" selection-start-line="32" selection-start-column="20" selection-end-line="33" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/themes/luxe/css/all.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="10318" column="21" selection-start-line="10318" selection-start-column="21" selection-end-line="10318" selection-end-column="21" />
+              <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -142,8 +124,8 @@
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/front/event/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/vue/components/event-card.js" />
         <option value="$PROJECT_DIR$/public/js/vue/components/talk-card.js" />
+        <option value="$PROJECT_DIR$/public/js/vue/components/event-card.js" />
         <option value="$PROJECT_DIR$/resources/views/front/talk/index.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/luxe/css/all.css" />
       </list>
@@ -620,7 +602,7 @@
       <workItem from="1479213100888" duration="110000" />
       <workItem from="1479668258967" duration="620000" />
       <workItem from="1479679721146" duration="16000" />
-      <workItem from="1479723193616" duration="8233000" />
+      <workItem from="1479723193616" duration="8957000" />
     </task>
     <task id="LOCAL-00001" summary="Configuring Code Climate">
       <created>1471116275644</created>
@@ -937,11 +919,27 @@
       <option name="project" value="LOCAL" />
       <updated>1476912247668</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added total_tickets to front">
+      <created>1479731459447</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1479731459447</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="499353000" />
+    <option name="totallyTimeSpent" value="500077000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1046" extended-state="6" />
@@ -949,9 +947,10 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2642015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32703003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -963,7 +962,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -998,7 +996,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Did create event" />
     <MESSAGE value="Did list event" />
     <MESSAGE value="Did view all event" />
     <MESSAGE value="Did form create talk" />
@@ -1023,7 +1020,8 @@
     <MESSAGE value="Fixing subscribe talk to event" />
     <MESSAGE value="Remove old test" />
     <MESSAGE value="Added UserFunctionalTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added UserFunctionalTest" />
+    <MESSAGE value="Added total_tickets to front" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added total_tickets to front" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1484,34 +1482,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/event/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="89" />
+        <state relative-caret-position="277">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
             <element signature="e#1549#1614#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/vue/components/event-card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="33" column="76" selection-start-line="32" selection-start-column="20" selection-end-line="33" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/front/talk/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="56" column="89" selection-start-line="56" selection-start-column="89" selection-end-line="56" selection-end-column="89" />
+        <state relative-caret-position="384">
+          <caret line="55" column="80" selection-start-line="55" selection-start-column="80" selection-end-line="55" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/luxe/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="10318" column="21" selection-start-line="10318" selection-start-column="21" selection-end-line="10318" selection-end-column="21" />
+        <state relative-caret-position="1032">
+          <caret line="10405" column="14" selection-start-line="10405" selection-start-column="14" selection-end-line="10405" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/vue/components/event-card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
           <folding />
         </state>
       </provider>
