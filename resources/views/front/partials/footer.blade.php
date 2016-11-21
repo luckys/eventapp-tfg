@@ -12,10 +12,10 @@
                     <div class="col-md-6">
                         <h3>Enalces</h3>
                         <ul class="link">
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Eventos</a></li>
-                            <li><a href="#">Charlas</a></li>
-                            <li><a href="#">Ponentes</a></li>
+                            <li><a href="{{ url('/') }}">Inicio</a></li>
+                            <li><a href="{{ url('events') }}">Eventos</a></li>
+                            <li><a href="{{ url('talks') }}">Charlas</a></li>
+                            <li><a href="{{ url('/') }}">Ponentes</a></li>
                         </ul>
                     </div>
 
