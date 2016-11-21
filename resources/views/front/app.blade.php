@@ -14,7 +14,6 @@
 
         @include('front.partials.header')
 
-
         @unless((\Request::is('events/*/form')) ||
         (\Request::is('talks/*/form')) ||
          (\Request::is('auth/password/*')))
@@ -23,7 +22,11 @@
 
 
         @if(\Request::is('/'))
-            @include('front.partials.navbar_counter')
+            @include('front.partials.navbar_counter', [
+                'total_users' => $users,
+                'total_talks' => $talks,
+                'total_events' => $events
+            ])
         @endif
 
             @yield('content')
