@@ -30,6 +30,8 @@ Vue.component('talk-card', {
                 this.talks = talk;
                 for (var i=0; i < this.talks.length; i++) {
                     this.talks[i].price = Number(this.talks[i].price);
+                    this.events[i].total_tickets = Number(this.events[i].total_tickets);
+                    this.events[i].promo = this.events[i].total_tickets < 6;
                 }
             }.bind(this));
         }

@@ -55,6 +55,10 @@
                         @else
                             <a class="book-now text-center" href="{{ url('events/') }}/@{{ event.id }}/form"> Comprar</a>
                         @endif
+                        <div v-show="event.promo" class="promotion">
+                            <h4><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                                Apúrate!!</h4>
+                        </div>
                     </div>
                     <div class="desc fix-text-event">
                         <h3><a href="{{ url('events/show') }}/@{{ event.id }}"><strong>@{{ event.name }}</strong></a></h3>
@@ -62,6 +66,7 @@
                             <i class="fa fa-calendar"></i>  @{{ event.start_date }}
                         </h4>
                         <h3><i class="fa fa-map-marker"></i>  @{{ event.address }}</h3>
+                        <h3><i class="fa fa-ticket"></i>  @{{ event.total_tickets }}</h3>
                     </div>
                 </div>
             </div>

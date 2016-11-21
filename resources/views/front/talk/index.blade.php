@@ -42,6 +42,10 @@
                         @else
                             <a class="book-now text-center" href="{{ url('talks/') }}/@{{ talk.id }}/form"> Comprar</a>
                         @endif
+                        <div v-show="event.promo" class="promotion">
+                            <h4><i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                                Apúrate!!</h4>
+                        </div>
                     </div>
                     <div class="desc fix-text-talk">
                         <h3><a href="{{ url('talks/show') }}/@{{ talk.id }}"><strong>@{{ talk.title }}</strong></a></h3>
@@ -50,6 +54,7 @@
                         </h4>
                         <h3><i class="fa fa-map-marker"></i>  @{{ talk.address }}</h3>
                         <h3><i class="fa fa-user"></i>  @{{ talk.speaker }}</h3>
+                        <h3><i class="fa fa-ticket"></i>  @{{ event.total_tickets }}</h3>
                     </div>
                 </div>
             </div>

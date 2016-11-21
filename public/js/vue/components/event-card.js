@@ -30,6 +30,8 @@ Vue.component('event-card', {
                 this.events = event;
                 for (var i=0; i < this.events.length; i++) {
                     this.events[i].price = Number(this.events[i].price);
+                    this.events[i].total_tickets = Number(this.events[i].total_tickets);
+                    this.events[i].promo = this.events[i].total_tickets < 6;
                 }
             }.bind(this));
         }

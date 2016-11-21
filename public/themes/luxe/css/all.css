@@ -10335,6 +10335,22 @@ div.cs-select span {
   -o-transition: 0.1s;
   transition: 0.1s;
 }
+
+#fh5co-hotel-section .hotel-content .hotel-grid .promotion {
+    width: 150px;
+    margin-top: 256px;
+    border: 1px solid #444;
+    position: absolute;
+    left: -10px;
+    padding: 10px;
+    background: #fff;
+}
+
+#fh5co-hotel-section .hotel-content .hotel-grid .promotion > h4 {
+    font-size: 20px;
+    margin: 0 0 0 10px;
+}
+
 #fh5co-hotel-section .hotel-content .hotel-grid > div small {
   display: block;
   text-transform: uppercase;
@@ -10381,7 +10397,7 @@ div.cs-select span {
 .fix-text-event {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	height: 200px;
+	height: 230px;
 }
 
 .fix-text-talk {
