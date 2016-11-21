@@ -41,7 +41,7 @@
                                     <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/subscribe/') }}" alt="dagdgdg">
                                         <i class="fa fa-thumbs-o-up"></i>
                                     </a>
-                                    <a class="btn btn-default" href="{{ url('admin/talks/show/'.$talk->id) }}">
+                                    <a class="btn btn-default" href="{{ url('talks/show/'.$talk->id) }}">
                                         <i class="fa fa-eye"></i>
                                     </a>
                                     <a class="btn btn-default" href="{{ url('admin/talks/'.$talk->id.'/edit/') }}">

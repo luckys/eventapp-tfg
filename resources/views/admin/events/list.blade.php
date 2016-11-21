@@ -37,7 +37,7 @@
                                 <td>{{ $event->price }} €</td>
                                 <td>
                                     <p>
-                                        <a class="btn btn-default" href="{{ url('admin/events/show/'.$event->id) }}">
+                                        <a class="btn btn-default" href="{{ url('events/show/'.$event->id) }}">
                                             <i class="fa fa-eye"></i>
                                         </a>
                                         <a class="btn btn-default" href="{{ url('admin/events/'.$event->id.'/edit/') }}">
