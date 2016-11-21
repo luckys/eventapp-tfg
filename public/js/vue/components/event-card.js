@@ -4,7 +4,8 @@ Vue.component('event-card', {
     props: {
         filterStartDate: String,
         filterQuery: String,
-        order: Number
+        order: Number,
+        url: String
     },
 
     data: function () {
@@ -26,7 +27,7 @@ Vue.component('event-card', {
 
     methods: {
         fetchEventList: function () {
-            $.getJSON('api/events', function (event) {
+            $.getJSON(this.url, function (event) {
                 this.events = event;
                 for (var i=0; i < this.events.length; i++) {
                     this.events[i].price = Number(this.events[i].price);

@@ -319,4 +319,17 @@ abstract class EloquentRepository implements BaseRepository
 
         return $this;
     }
+
+    /**
+     * Limit numbers of record
+     *
+     * @param $limit
+     * @return $this
+     * @internal param $relations
+     *
+     */
+    public function take($limit)
+    {
+        return $this->model->take((int)$limit);
+    }
 }

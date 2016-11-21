@@ -12,6 +12,8 @@
 */
 
 use EventApp\Domain\Models\User;
+use EventApp\Domain\Models\Event;
+use EventApp\Domain\Models\Talk;
 
 $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $faker) {
 
@@ -32,7 +34,7 @@ $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $
 $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator $faker) {
 
     return [
-        'author_id' => User::all()->random()->id,
+        'author_id' => $faker->uuid,
         'name' => $faker->sentence,
         'description' => $faker->sentence,
         'start_date' => \Carbon\Carbon::now()->addDays(rand(1, 10)),
@@ -40,7 +42,7 @@ $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator 
         'address' => $faker->address,
         'capacity' => 50,
         'total_tickets' => 50,
-        'price' => $faker->randomFloat(2, 0, 500),
+        'price' => 388.89,
         'image' => 'events.jpg',
     ];
 });

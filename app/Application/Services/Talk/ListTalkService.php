@@ -33,7 +33,7 @@ class ListTalkService extends TalkService
     /**
      * @return mixed
      */
-    public function getAllTalks()
+    public function getAllTalks($request = null)
     {
         try {
             $talks = [];
@@ -41,6 +41,13 @@ class ListTalkService extends TalkService
                            ->orderBy('created_at', 'desc')
                            ->with(['speaker'])
                            ->findWhere([['total_tickets', '>', 0]]);
+
+            if(!is_null($request->limit))
+                $datas =  $this->talk
+                    ->orderBy('created_at', 'desc')
+                    ->with(['speaker'])
+                    ->findWhere([['total_tickets', '>', 0]])->take($request->limit);
+
             foreach ($datas as $talk) {
                 $result = [
                     'id' => $talk->id,

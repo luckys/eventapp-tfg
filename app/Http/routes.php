@@ -55,8 +55,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 });
 
 Route::group(['prefix' => 'api'], function () {
-    Route::get('events', 'EventController@index');
-    Route::get('talks', 'TalkController@index');
+    Route::get('events/{limit?}', 'EventController@index');
+    Route::get('talks/{limit?}', 'TalkController@index');
     Route::get('all', 'MainController@all');
 });
 

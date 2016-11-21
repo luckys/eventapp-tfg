@@ -23,7 +23,8 @@
                 <talk-card
                         :filter-start-date="searchStartDate"
                         :filter-query="searchQuery"
-                        :order="order"
+                        :order="order",
+                        url="api/talks"
                 >
                 </talk-card>
             </div>

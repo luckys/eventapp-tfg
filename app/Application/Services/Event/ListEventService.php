@@ -29,7 +29,21 @@ class ListEventService extends EventService
     /**
      * @return mixed
      */
-    public function getAllEvents()
+    public function getAllEvents($request = null)
+    {
+        try {
+            if(!is_null($request->limit))
+                return $this->event->orderBy('created_at', 'desc')->findWhere([['total_tickets', '>', 0]])->take($request->limit);
+            return $this->event->orderBy('created_at', 'desc')->findWhere([['total_tickets', '>', 0]]);
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLimitEvents($request = null)
     {
         try {
             return $this->event->orderBy('created_at', 'desc')->findWhere([['total_tickets', '>', 0]]);

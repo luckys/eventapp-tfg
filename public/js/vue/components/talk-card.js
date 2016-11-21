@@ -4,7 +4,8 @@ Vue.component('talk-card', {
     props: {
         filterStartDate: String,
         filterQuery: String,
-        order: Number
+        order: Number,
+        url: String
     },
 
     data: function () {
@@ -26,7 +27,7 @@ Vue.component('talk-card', {
 
     methods: {
         fetchtalkList: function () {
-            $.getJSON('api/talks', function (talk) {
+            $.getJSON(this.url, function (talk) {
                 this.talks = talk;
                 for (var i=0; i < this.talks.length; i++) {
                     this.talks[i].price = Number(this.talks[i].price);

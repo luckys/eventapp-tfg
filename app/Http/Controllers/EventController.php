@@ -25,9 +25,9 @@ class EventController extends Controller
      * @param ListEventService $service
      * @return \Illuminate\Http\Response
      */
-    public function index(ListEventService $service)
+    public function index(Request $request, ListEventService $service)
     {
-        return $service->getAllEvents();
+        return $service->getAllEvents($request);
     }
 
     /**

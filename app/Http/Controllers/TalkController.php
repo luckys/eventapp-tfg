@@ -24,9 +24,9 @@ class TalkController extends Controller
      * @param ListTalkService $service
      * @return \Illuminate\Http\Response
      */
-    public function index(ListTalkService $service)
+    public function index(Request $request, ListTalkService $service)
     {
-        return $service->getAllTalks();
+        return $service->getAllTalks($request);
     }
 
     public function formSubscribe($id, ListTalkService $service, ShowTalkService $serviceShow)
