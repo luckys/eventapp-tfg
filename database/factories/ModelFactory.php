@@ -19,7 +19,7 @@ $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $
 
     return [
         'email' => $faker->companyEmail,
-        'password' => 'speaker',
+        'password' => 'password',
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
         'company' => $faker->company,
@@ -33,33 +33,39 @@ $factory->define(EventApp\Domain\Models\User::class, function (Faker\Generator $
 
 $factory->define(EventApp\Domain\Models\Event::class, function (Faker\Generator $faker) {
 
+    $initial_capacity = $faker->numberBetween(1, 100);
+
     return [
         'author_id' => $faker->uuid,
         'name' => $faker->sentence,
         'description' => $faker->sentence,
-        'start_date' => \Carbon\Carbon::now()->addDays(rand(1, 10)),
+        'start_date' => \Carbon\Carbon::now(),
         'end_date' => \Carbon\Carbon::now()->addDays(rand(1, 10)),
         'address' => $faker->address,
-        'capacity' => 50,
-        'total_tickets' => 50,
-        'price' => 388.89,
+        'capacity' => $initial_capacity,
+        'total_tickets' => $faker->numberBetween(0, $initial_capacity),
+        'price' => $faker->randomFloat(2, 0, 500),
         'image' => 'events.jpg',
     ];
 });
 
 $factory->define(EventApp\Domain\Models\Talk::class, function (Faker\Generator $faker) {
 
+    $initial_capacity = $faker->numberBetween(1, 100);
+    $type = ['Seminario', 'Taller', 'Conferencia'];
+    $level = ['Principiante', 'Intermedio', 'Avanzado'];
+
     return [
         'speaker_id' => User::all()->random()->id,
         'title' => $faker->sentence,
         'description' => $faker->sentence,
-        'type' => 'Seminario',
-        'level' => 'Intermedio',
+        'type' => $type[mt_rand(0, 2)],
+        'level' => $level[mt_rand(0, 2)],
         'start_date' => \Carbon\Carbon::now()->addDays(rand(1, 10)),
         'length' => $faker->numberBetween(10, 90),
         'address' => $faker->address,
-        'capacity' => 1,
-        'total_tickets' => 1,
+        'capacity' => $initial_capacity,
+        'total_tickets' => $faker->numberBetween(0, $initial_capacity),
         'price' => $faker->randomFloat(2, 0, 500),
         'image' => 'talk1.jpg',
     ];

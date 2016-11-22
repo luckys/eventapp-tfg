@@ -44,7 +44,7 @@
                             <div class="panel-heading">Charlas Subscritas al Evento</div>
                             <div class="panel-body">
                                 <ul class="list-group">
-                                    @foreach($event->talks as $talk)
+                                    @foreach($talks as $talk)
                                     <a href="{{ url('talks/show/'.$talk->id) }}" class="list-group-item">
                                         <div>
                                             <div class="media-left">

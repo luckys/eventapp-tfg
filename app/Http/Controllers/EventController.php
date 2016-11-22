@@ -96,8 +96,9 @@ class EventController extends Controller
     public function show($id, ShowEventService $service)
     {
         $event = $service->execute(null, $id);
+        $talks = $event->talks()->where('status', '=', 'Aprobado')->get();
 
-        return view('front.event.show', compact('event'));
+        return view('front.event.show', compact('event', 'talks'));
     }
 
     /**
