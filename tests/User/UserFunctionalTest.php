@@ -10,7 +10,10 @@ class UserFunctionalTest extends TestCase
     {
         parent::setUp();
         $this->model = app(\EventApp\Domain\Models\Contracts\UserRepositoryInterface::class);
-        $this->user = factory(\EventApp\Domain\Models\User::class)->create();
+        $this->user = factory(\EventApp\Domain\Models\User::class)->create([
+            'email' => 'user1@demo.com',
+            'password' => 'user123'
+        ]);
     }
 
     /**
@@ -18,8 +21,11 @@ class UserFunctionalTest extends TestCase
      */
     public function it_login_a_user()
     {
-        $this->user = factory(\EventApp\Domain\Models\User::class)->create();
-        $credentials = ['email' => $this->user->email, 'password' => 'speaker'];
+        $this->user = factory(\EventApp\Domain\Models\User::class)->create([
+            'email' => 'user2@demo.com',
+            'password' => 'user123'
+        ]);
+        $credentials = ['email' => $this->user->email, 'password' => 'user123'];
         $this->post('auth/login', $credentials);
         $this->assertResponseStatus(302);
         $this->assertRedirectedTo('admin/dashboard', $with = []);
@@ -81,7 +87,7 @@ class UserFunctionalTest extends TestCase
     {
         auth()->login($this->user);
         $params = [
-            'old_password' => 'speaker',
+            'old_password' => 'user123',
             'password' => 'new password',
             'password_confirmation' => 'new password'
         ];

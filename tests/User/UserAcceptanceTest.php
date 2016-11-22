@@ -11,7 +11,10 @@ class UserAcceptanceTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->user = factory(\EventApp\Domain\Models\User::class)->create();
+        $this->user = factory(\EventApp\Domain\Models\User::class)->create([
+            'email' => 'user@demo.com',
+            'password' => 'user123'
+        ]);
     }
 
     /**
@@ -20,8 +23,8 @@ class UserAcceptanceTest extends TestCase
     public function it_testing_form_for_create_a_user()
     {
         $this->visit('/')
-            ->type('taylor@demo.com', 'email')
-            ->type('taylor1234', 'password')
+            ->type('user1@demo.com', 'email')
+            ->type('user123', 'password')
             ->type('Taylor', 'firstname')
             ->type('Doe', 'lastname')
             ->press('Registrarse')
@@ -35,7 +38,7 @@ class UserAcceptanceTest extends TestCase
     {
         $this->visit('/')
             ->type($this->user->email, 'email')
-            ->type('speaker', 'password')
+            ->type('user123', 'password')
             ->press('Entrar')
             ->seePageIs('/admin/dashboard');
     }
