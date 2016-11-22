@@ -4,6 +4,7 @@ namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Event\CreateEventService;
 use EventApp\Application\Services\Event\DeleteEventService;
+use EventApp\Application\Services\Event\DeleteStateEventService;
 use EventApp\Application\Services\Event\GeneratePdfEventService;
 use EventApp\Application\Services\Event\ListEventService;
 use EventApp\Application\Services\Event\PaymentEventService;
@@ -169,8 +170,8 @@ class EventController extends Controller
     {
         $flag = $service->execute($request, $request->id);
 
-        if($flag)
-            return redirect('events/ticket/'.$request->id.'/purchased');
+        if ($flag)
+            return redirect('events/ticket/' . $request->id . '/purchased');
 
         return response('Compra hecha');
     }
@@ -179,8 +180,8 @@ class EventController extends Controller
     {
         $flag = $service->execute(null, $id);
 
-        if($flag)
-            return redirect('events/ticket/'.$id.'/purchased');
+        if ($flag)
+            return redirect('events/ticket/' . $id . '/purchased');
 
         return response('Compra hecha');
     }
@@ -189,9 +190,9 @@ class EventController extends Controller
     {
         $pdf = $service->execute(null, $id);
 
-        $nameFile = str_random(10).'.pdf';
+        $nameFile = str_random(10) . '.pdf';
 
-        $patchURL = 'uploads/events/tickets/'.$nameFile;
+        $patchURL = 'uploads/events/tickets/' . $nameFile;
 
         $patchFile = public_path($patchURL);
 
@@ -205,5 +206,12 @@ class EventController extends Controller
         event(new EventWasPurchased($user));
 
         return $pdf->save($patchFile)->stream();
+    }
+
+    public function deleteState(Request $request, DeleteStateEventService $service)
+    {
+        $service->execute($request);
+
+        return redirect()->back()->with('message', 'Charla desaprobada correctamente');
     }
 }

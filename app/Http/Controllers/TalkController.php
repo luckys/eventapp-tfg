@@ -3,6 +3,7 @@
 namespace EventApp\Http\Controllers;
 
 use EventApp\Application\Services\Talk\CreateTalkService;
+use EventApp\Application\Services\Talk\DeleteStateTalkService;
 use EventApp\Application\Services\Talk\DeleteTalkService;
 use EventApp\Application\Services\Talk\GeneratePdfTalkService;
 use EventApp\Application\Services\Talk\ListTalkService;
