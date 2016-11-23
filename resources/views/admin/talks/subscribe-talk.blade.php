@@ -7,7 +7,7 @@
                 @include('admin.partials.message')
                 <div class="col-md-6">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Eventos para Subscribirse</div>
+                        <div class="panel-heading">Eventos para Suscribirse</div>
                         <div class="panel-body">
                             <table class="table table-hover general-table">
                                 <thead>
@@ -27,7 +27,7 @@
                                         <td>{{ $event->name }}</td>
                                         <td>{{ $event->start_date }}</td>
                                         <td>
-                                            <button class="btn btn-primary" type="submit">Susbcribir</button>
+                                            <button class="btn btn-primary" type="submit">Suscribir</button>
                                         </td>
                                     </tr>
                                     {!! Form::close() !!}
@@ -41,7 +41,7 @@
 
                 <div class="col-md-6">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Eventos Subscritos</div>
+                        <div class="panel-heading">Eventos Suscritos</div>
                         <div class="panel-body">
                             <table class="table table-hover general-table">
                                 <thead>
