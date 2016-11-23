@@ -27,6 +27,9 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @if($events->isEmpty())
+                            <tr class="text-center"><td>No hay eventos para mostrar</td></tr>
+                        @endif
 
                         @foreach($events as $event)
 

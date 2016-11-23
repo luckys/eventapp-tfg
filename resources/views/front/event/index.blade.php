@@ -2,18 +2,6 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('themes/admin/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}">
-    <style>
-        .staggered-transition {
-            transition: all .5s ease;
-            overflow: hidden;
-            margin: 0;
-            height: 20px;
-        }
-        .staggered-enter, .staggered-leave {
-            opacity: 0;
-            height: 0;
-        }
-    </style>
 @endsection
 
 @section('content')
@@ -63,7 +51,7 @@
                     <div class="desc fix-text-event">
                         <h3><a href="{{ url('events/show') }}/@{{ event.id }}"><strong>@{{ event.name }}</strong></a></h3>
                         <h4>
-                            <i class="fa fa-calendar"></i>  @{{ event.start_date }}
+                            <i class="fa fa-calendar"></i>  @{{ event.start_date }} <span class="label label-primary pull-right">Evento</span>
                         </h4>
                         <h3><i class="fa fa-map-marker"></i>  @{{ event.address }}</h3>
                         <h3><i class="fa fa-ticket"></i>  @{{ event.total_tickets }}</h3>

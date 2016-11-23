@@ -27,6 +27,10 @@
                         </thead>
                         <tbody>
 
+                        @if($talks->isEmpty())
+                            <tr class="text-center"><td>No hay charlas para mostrar</td></tr>
+                        @endif
+
                         @foreach($talks as $talk)
 
                         <tr data-id="{{ $talk->id }}">

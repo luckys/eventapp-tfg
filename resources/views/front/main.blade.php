@@ -44,7 +44,7 @@
                     <div class="desc fix-text-event">
                         <h3><a href="{{ url('events/show') }}/@{{ event.id }}"><strong>@{{ event.name }}</strong></a></h3>
                         <h4>
-                            <i class="fa fa-calendar"></i>  @{{ event.start_date }}
+                            <i class="fa fa-calendar"></i>  @{{ event.start_date }} <span class="label label-primary pull-right">Evento</span>
                         </h4>
                         <h3><i class="fa fa-map-marker"></i>  @{{ event.address }}</h3>
                         <h3><i class="fa fa-ticket"></i>  @{{ event.total_tickets }}</h3>
@@ -73,7 +73,7 @@
                     <div class="desc fix-text-talk">
                         <h3><a href="{{ url('talks/show') }}/@{{ talk.id }}"><strong>@{{ talk.title }}</strong></a></h3>
                         <h4>
-                            <i class="fa fa-calendar"></i>  @{{ talk.start_date }}
+                            <i class="fa fa-calendar"></i>  @{{ talk.start_date }} <span class="label label-primary pull-right">@{{ talk.type }}</span>
                         </h4>
                         <h3><i class="fa fa-map-marker"></i>  @{{ talk.address }}</h3>
                         <h3><i class="fa fa-user"></i>  @{{ talk.speaker }}</h3>

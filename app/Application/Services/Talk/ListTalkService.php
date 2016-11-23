@@ -54,6 +54,7 @@ class ListTalkService extends TalkService
                     'title' => $talk->title,
                     'start_date' => $talk->start_date,
                     'address' => $talk->address,
+                    'type' => $talk->type,
                     'price' => $talk->price,
                     'image' => $talk->image,
                     'speaker' => $talk->speaker->fullname,
