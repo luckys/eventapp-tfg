@@ -48,7 +48,7 @@
                                     <a href="{{ url('talks/show/'.$talk->id) }}" class="list-group-item">
                                         <div>
                                             <div class="media-left">
-                                                <img class="media-object" src="http://fakeimg.pl/64x64/" alt="...">
+                                                <img class="media-object" src="{{ asset('uploads/talks/'.$talk->image) }}" width="64" height="64" alt="...">
                                             </div>
                                             <div class="media-body">
                                                 <h4 class="media-heading">{{ $talk->title }} <span class="label label-info">{{ $talk->start_date }}</span></h4>
