@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1feee202-07cf-48bc-bfdc-b89ad362ec55" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/events/show.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="eventapp-tfg.iws" />
@@ -152,6 +153,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="eventapp-tfg" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eventapp-tfg" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -359,14 +370,7 @@
       <workItem from="1479747646459" duration="222000" />
       <workItem from="1479808922826" duration="6739000" />
       <workItem from="1479822996221" duration="1446000" />
-      <workItem from="1479894525295" duration="3817000" />
-    </task>
-    <task id="LOCAL-00006" summary="Configuring development environment">
-      <created>1471616389410</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1471616389410</updated>
+      <workItem from="1479894525295" duration="3985000" />
     </task>
     <task id="LOCAL-00007" summary="Added event model">
       <created>1471866287678</created>
@@ -704,11 +708,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479899819476</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Fixed bugs">
+      <created>1479899852746</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1479899852746</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="525530000" />
+    <option name="totallyTimeSpent" value="525698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,37 +817,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://PHP/\EventApp\Application\Services\Event\CreateEventService">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\EventApp\Application\Services\Event\CreateEventService</OriginalElement>
-          <nodes>
-            <node x="0.0" y="172.0">\EventApp\Application\Services\Event\CreateEventService</node>
-            <node x="3.5" y="0.0">\EventApp\Application\Services\ApplicationService</node>
-            <node x="25.0" y="86.0">\EventApp\Application\Services\Event\EventService</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\EventApp\Application\Services\Event\CreateEventService" target="\EventApp\Application\Services\Event\EventService">
-              <point x="0.0" y="-18.0" />
-              <point x="0.0" y="18.0" />
-            </edge>
-            <edge source="\EventApp\Application\Services\Event\EventService" target="\EventApp\Application\Services\ApplicationService">
-              <point x="0.0" y="-18.0" />
-              <point x="0.0" y="18.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="89.0" y="104.0" />
-          <SelectedNodes>
-            <node>\EventApp\Application\Services\ApplicationService</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Domain/Models/Contracts/EventRepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1195,6 +1175,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="25" column="57" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/events/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
