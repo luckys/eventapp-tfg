@@ -70,13 +70,12 @@ class ListTalkService extends TalkService
     public function getEventsSubscribible($id)
     {
         try {
-            //$talk = $this->talk->find($id);
 
-            $events = DB::table('events')
-                        ->where('start_date', '>=', Carbon::now())
-                        ->leftJoin('event_talk', 'events.id', '=', 'event_talk.event_id')
-                        ->whereNull('event_talk.talk_id') // , '=', $id)
-                        ->get();
+            $events = Event::whereHas('talks', function ($query) use ($id) {
+                $query->where('talk_id', $id);
+            }, '<', 1)
+                ->whereDate('start_date', '>=', Carbon::now())
+                ->get();
 
             return $events;
 
@@ -88,13 +87,11 @@ class ListTalkService extends TalkService
     public function getEventsSigned($id)
     {
         try {
-            //$talk = $this->talk->find($id);
 
             $events = Event::whereHas('talks', function ($query) use ($id) {
                 $query->where('talk_id', $id);
             })
                 ->whereDate('start_date', '>=', Carbon::now())
-                //->whereDate('end_date', '>=', $talk->start_date)
                 ->get();
 
             return $events;
