@@ -12,7 +12,7 @@ class EventFunctionalTest extends TestCase
     {
         parent::setUp();
         $this->model = app(\EventApp\Domain\Models\Contracts\EventRepositoryInterface::class);
-        $this->event = factory(\EventApp\Domain\Models\Event::class, 5)->create();
+        $this->event = factory(\EventApp\Domain\Models\Event::class)->create();
     }
 
     /**
@@ -21,6 +21,6 @@ class EventFunctionalTest extends TestCase
     public function it_get_all_events()
     {
         $events = $this->model->all()->count();
-        $this->assertEquals(5, $events);
+        $this->assertEquals(1, $events);
     }
 }
