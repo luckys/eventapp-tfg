@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1feee202-07cf-48bc-bfdc-b89ad362ec55" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Application/Services/Talk/ListTalkService.php" afterPath="$PROJECT_DIR$/app/Application/Services/Talk/ListTalkService.php" />
     </list>
     <ignored path="eventapp-tfg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -364,14 +363,7 @@
       <workItem from="1479921730352" duration="1635000" />
       <workItem from="1479929304797" duration="1778000" />
       <workItem from="1479982111122" duration="10000" />
-      <workItem from="1479982131473" duration="3204000" />
-    </task>
-    <task id="LOCAL-00015" summary="Did create talk">
-      <created>1472320037170</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1472320037170</updated>
+      <workItem from="1479982131473" duration="3258000" />
     </task>
     <task id="LOCAL-00016" summary="Did list talk">
       <created>1472551169270</created>
@@ -709,11 +701,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479984922317</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Fixed the fucking bug on events and talks">
+      <created>1479990123584</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1479990123584</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="536930000" />
+    <option name="totallyTimeSpent" value="536984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -779,7 +778,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rollback to master" />
     <MESSAGE value="Add search query" />
     <MESSAGE value="Fix style button" />
     <MESSAGE value="Changing slider" />
@@ -804,7 +802,8 @@
     <MESSAGE value="Fixed bugs" />
     <MESSAGE value="Remove show view" />
     <MESSAGE value="Fixed bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug" />
+    <MESSAGE value="Fixed the fucking bug on events and talks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the fucking bug on events and talks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
